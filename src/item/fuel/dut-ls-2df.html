@@ -1,0 +1,193 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Датчик уровня топлива в металлическом корпусе Arnavi ДУТ LS-2DF</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Контроль топлива</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="dut-ls-2df.html"><span>Arnavi LS-2DF</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title main-equip__title_wrap">ARNAVI ДУТ LS-2DF</h2>
+						<h3 class="main-equip__subtitle">Датчик уровня топлива в металлическом корпусе</h3>
+						<p class="main-equip__text">Предназначен для измерения уровня топлива в емкостях
+							на автотранспорте,
+							железнодорожном транспорте, складах ГСМ, преобразования измеренного уровня в объем.</p>
+						<a href="#request-ls-2df" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/fuel/arnavi-ls2df.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li>Датчик уровня топлива «Arnavi LS-2DF» – один из самых эффективных инструментов контроля
+									расхода топлива. Отличительные особенности датчика: универсальность, удобство и надежность.
+									ДУТ имеет встроенный датчик температуры и два активных выходных сигнала: цифровой RS485 и
+									частотный выход, которые работают одновременно и параллельно, т.е. можно произвести
+									подключения сразу по двум каналам;</li>
+								<li>ДУТ поддерживает протокол Omnicomm LLS (по цифровому интерфейсу), что позволяет использовать
+									датчик в любых системах мониторинга транспорта;</li>
+								<li>Основными задачами, стоявшими перед специалистами нашей компании при проектировании нового
+									датчика уровня топлива, стали обеспечение высокой надежности и точности измерения.</li>
+								<li>Датчик не предназначен для измерения уровня воды и других токопроводящих жидкостей, а также
+									жидкостей изменяющих агрегатное состояние в рабочем диапазоне температур. Датчик не
+									предназначен для измерения уровня топлива в емкостях, к которым предъявляются требования
+									взрывозащиты оборудования.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Напряжение питания</p>
+									<p class="tabs-info__right">от 12 В до 40 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Ток потребления</p>
+									<p class="tabs-info__right tabs-info__right_wrap">при 12 В не более 20 мА,<br>при 24 В не
+										более 10 мА</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Встроенная гальваническая развязка</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита цифрового выхода</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от переполюсовки</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от перенапряжения</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Выходы (все в одном ДУТ)</p>
+									<p class="tabs-info__right">RS485 / RS232* <br>Скорость передачи интерфейса 19200 бит/с</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Встроенный датчик температуры</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Погрешность измерения</p>
+									<p class="tabs-info__right">не более 0.8 %</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Диапазон рабочих температур</p>
+									<p class="tabs-info__right">от - 40 до + 60 ºС</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Длина измерительной части</p>
+									<p class="tabs-info__right">от 20 до 250 см</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Обновление ПО</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+
+								<a href="../download/ls-2df/LS-2DF.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="../download/ls-2df/LS_configurator_2.10.exe_.zip" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Конфигуратор для ДУТ</p>
+								</a>
+								<a href="../download/ls-2df/GOST-LS-2DF.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Датчик измерения температуры Arnavi Temperature</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Контроль температуры</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-temperature.html"><span>Arnavi Temperature</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI TEMPERATURE</h2>
+						<h3 class="main-equip__subtitle">Датчик измерения температуры</h3>
+						<p class="main-equip__text">Предназначен для длительного контроля температуры в диапазоне от -55 до
+							+125 С.</p>
+						<a href="#request-temperature" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-temperature.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text">Предназначен для длительного контроля температуры в диапазоне от -55 до
+								+125 С. Подключается по
+								интерфейсу 1-wire к любым навигационным терминалам. Устройство имеет миниатюрный размер, что
+								способствует более простой и быстрой установке.</p>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">3 - 5,5</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита при превышении напряжения</p>
+									<p class="tabs-info__right">нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от "переполюсовки" питания</p>
+									<p class="tabs-info__right">нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">-55ºC ... +125ºC</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс</p>
+									<p class="tabs-info__right">1-WIRE</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

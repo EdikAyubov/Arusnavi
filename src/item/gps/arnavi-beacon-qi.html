@@ -1,0 +1,325 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Автономное спутниковое устройство Arnavi Beacon QI</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">GPS-маяки</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-tag.html"><span>Arnavi Beacon Qi</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI BEACON Qi</h2>
+						<h3 class="main-equip__subtitle">Автономное спутниковое устройство с беспроводной зарядкой</h3>
+						<p class="main-equip__text">Маяк Arnavi BEACON – это портативное автономное спутниковое
+							устройство, предназначено для определения точного местоположения объекта. Передача владельцу
+							координат объекта осуществляется по протоколу GPRS, с поддержкой беспроводной зарядки.</p>
+						<a href="#request-arnavi-beacon" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/tracker/arnavi-beacon-qi.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text">Маяк Arnavi BEACON Qi – это портативное автономное спутниковое
+								устройство,
+								предназначено для определения точного местоположения объекта. Передача владельцу координат
+								объекта осуществляется по протоколу GPRS, с поддержкой беспроводной зарядки. </p>
+							<p class="tabs-info__text">Маяк Anravi BEACON Qi может быть использован в следующих целях :
+							</p>
+							<ul class="tabs-info__list">
+								<li>Определение местоположения транспортных средств;</li>
+								<li>Защита от угона и обнаружение угнанных транспортных средств;</li>
+								<li>Мониторинг передвижения посылок, грузов и их поиск в случае утери;</li>
+								<li>Контроль личного багажа;</li>
+								<li>Контроль за животными;</li>
+								<li>Обеспечение сохранности автоматов самообслуживания, мобильных витрин, электрогенераторов.
+								</li>
+							</ul>
+							<p class="tabs-info__text">Размещается на объекте мониторинга (например, в автомобиле), не требует
+								подключения к бортовой сети объекта.</p>
+							<p class="tabs-info__text">В случае угона или контроля, маяк дает возможность определить точное
+								местоположение объекта</p>
+
+							<p class="tabs-info__text">Для определения местоположения использует навигационную систему
+								GPS/GLONASS, в случаях, когда объект попадает в зону отсутствия GPS сигнала (подземный паркинг,
+								гаражный бокс) местоположение определится при помощи технологии LBS позиционирования.</p>
+
+							<p class="tabs-info__text">Устройство использует Li-ion аккумулятор на 1800mAh, с возможностью
+								беспроводной зарядки. </p>
+							<p class="tabs-info__text">Пользователю доступны три режима:</p>
+							<ul class="tabs-info__list">
+								<li><span>Интервальный</span> - выходит на связь строго по заданному интервалу (например: раз в
+									сутки/каждый час);</li>
+								<li><span>Активный</span> - передает события срабатывания датчика движения (например: при начале
+									и/или завершении движения);</li>
+								<li><span>Онлайн</span> - работает по принципу трекера: отработка траектории по углу, скорости,
+									расстоянию, времени (грубый трек).</li>
+							</ul>
+							<p class="tabs-info__text">Маяк Arnavi BEACON Qi выполнен в виде моноблока, поставляется с
+								интегрированным SIM-чипом, который работает практически в любой стране мира!</p>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<p class="tabs-info__text"><b>Аппаратные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Модуль GSM</p>
+									<p class="tabs-info__right">2G</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна GSM</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество SIM карт (чипов)</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль навигации</p>
+									<p class="tabs-info__right">GPS | ГЛОНАСС</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна навигации</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль BlueTooth (BLE)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна BlueTooth</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">10.8-11.3</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Среднее потребление
+										(режим сна - активный режим), мА</p>
+									<p class="tabs-info__right">0.005 - 30</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Резервный АКБ, мА</p>
+									<p class="tabs-info__right">7800</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Объем черного ящика, Мб / кол-во записей</p>
+									<p class="tabs-info__right">8 / 12000</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по минусу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по плюсу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Аналоговые входы (АЦП)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по минусу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по плюсу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">UART</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS232</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS485</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">CAN</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">1-WIRE</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">USB</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Акселерометр (датчик движения)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Термодатчик встроенный</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Голосовая связь</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Вес, грамм</p>
+									<p class="tabs-info__right">140</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Габариты, мм</p>
+									<p class="tabs-info__right">D78 х H23</p>
+								</li>
+							</ul>
+							<p class="tabs-info__text"><b>Программные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Удаленная настройка, обновление ПО (WEB) </p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Программа ПК для настройки (USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Мобильное приложение (BlueTooth или USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые протоколы</p>
+									<p class="tabs-info__right">INTERNAL</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество серверов мониторинга</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-beacon/Beacon3_WLP_0.1.wlp" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/wialon.svg" alt="">
+										<img src="../img/products/wialon-white.svg" alt="">
+									</div>
+									<p>Шаблон объекта (wlp)</p>
+								</a>
+								<a href="../download/arnavi-beacon/Arnavi_Beacon3_0.3.9.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="../download/arnavi-beacon/declaration-beacon.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Декларация о соответствии</p>
+								</a>
+								<a href="../download/arnavi-beacon/certificate-beacon.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+								<a href="http://8888.arusnavi.ru/Configurator/" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Конфигуратор</p>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

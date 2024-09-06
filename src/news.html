@@ -1,0 +1,54 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>ArusNavi</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="@img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+	<!-- Добавляем хедер -->
+	@@include('html/header-main.html',{})
+
+	<section class="news">
+		<div class="container">
+			<h2 class="news__title title">Новости</h2>
+			<div class="news__wrapper">
+				<img class="news__img" src="img/news/L-SERIes, A-SERes в режиме маяка.png"
+					alt="L-SERIes, A-SERies в режиме маяка">
+				<div class="news-right">
+					<div class="news-name">
+						<div class="news-name__capiton">Дата: 14.03.2024</div>
+						<h3 class="news-name__text">L-series и A-series в режиме классического маяка!</h3>
+					</div>
+					<div class="news__descr">Трекеры L-series и А-series обладают не только
+						функциональностью полноценного трекера, но теперь также имеют режим классического маяка!</div>
+					<a href="download/news/pdf.pdf" class="news-button button-cyan">Почитать</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<!-- Добавляем футтер -->
+@@include('html/footer.html',{})
+<!-- Подключам jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- Подключаем второй слайдер -->
+<script src="js/slick.min.js"></script>
+<!-- Подключаем JS главный -->
+<script src="js/script.js"></script>
+<!-- Добавляем JS для форм -->
+<script src="js/form.js"></script>
+
+</html>

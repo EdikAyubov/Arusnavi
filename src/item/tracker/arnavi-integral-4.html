@@ -1,0 +1,375 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Навигационный контроллер Integral 4</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">GPS-трекеры</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-integral-4.html"><span>Integral 4</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title main-equip__title_wrap">INTEGRAL 4</h2>
+						<h3 class="main-equip__subtitle">Навигационный котроллер</h3>
+						<p class="main-equip__text">Устройство, позволяющее получить полную путевую информацию об автомобиле,
+							а так же данные с бортового компьютера транспортного средства.</p>
+						<a href="#request-arnavi-integral-4" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/tracker/integral-4.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text">Integral 4 – универсальный и функциональный навигационный контроллер,
+								обладающий огромным количеством возможностей. В компактном корпусе размещён мощный
+								микроконтроллер и множество интерфейсов, которые позволяют использовать Integral 4 в широком
+								спектре задач. </p>
+							<p class="tabs-info__text">Интерфейсы RS-232, RS-485, 1-WIRE и BLE позволяют подключать различное
+								оборудование: от датчиков уровня топлива и термодатчиков до считывателей меток и счётчиков
+								пассажиропотока. К Integral 4 можно подключить до 8 ДУТ одновременно, и до 10 BLE-датчиков:
+								возможности подключения практически безграничны. </p>
+							<p class="tabs-info__text">Но Integral 4 выгодно отличает наличие интерфейсов CAN и UART,
+								позволяющих подключить устройство к бортовому компьютеру и получать информацию о состоянии ТС.
+								Комбинируя все возможности Integral 4, вы получаете универсальный прибор для контроля и
+								мониторинга за транспортным средством. </p>
+							<!--							<p class="tabs-info__text"><span>Особенности Integral 4:</span></p>-->
+							<!--							<ul class="tabs-info__list">-->
+							<!--								<li>Integral-4 – компактное и функциональное устройство, которое несмотря на небольшой размер-->
+							<!--									имеет достаточно широкий функционал и поддерживает передовые дополнительный устройства-->
+							<!--									контроля и мониторинга;</li>-->
+							<!--								<li>Integral-4 имеет мощный микроконтроллер, который позволяет расширять его функционал-->
+							<!--									практически без ограничений;</li>-->
+							<!--								<li>Поддержка BlueTooth (BLE) обеспечивает подключение беспроводных датчиков (ДУТ, термодатчики-->
+							<!--									и другие);</li>-->
+							<!--								<li>Универсальный режим работы цифрового интерфейса RS485 или CAN выбирается пользователем на-->
+							<!--									уровне настройки прибора (перепаивать ничего не требуется);</li>-->
+							<!--								<li>В Integral-4 установлена специализированная микросхема для заряда и контроля АКБ, которая-->
+							<!--									позволяет настраивать режимы зарядки и контролировать заряд в зависимости от температуры;-->
+							<!--								</li>-->
+							<!--								<li>Так же имеется специальная кнопка на плате для функции скачать настройки, обновить ПО с WEB-->
+							<!--									конфигуратора. Это удобно, когда нет под рукой ПК, то простым нажатием на кнопку прибор сам-->
+							<!--									загружает назначенную версию ПО и настройки.</li>-->
+							<!--							</ul>-->
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<p class="tabs-info__text"><b>Аппаратные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Модуль GSM</p>
+									<p class="tabs-info__right">2G</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна GSM</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество SIM карт (чипов)</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль навигации</p>
+									<p class="tabs-info__right">GPS | ГЛОНАСС</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна навигации</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль BlueTooth (BLE)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна BlueTooth</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">8 - 50</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Среднее потребление
+										(режим сна - активный режим), мА</p>
+									<p class="tabs-info__right">1 - 70</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Резервный АКБ, мА</p>
+									<p class="tabs-info__right">300 - 1800</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Объем черного ящика, Мб / кол-во записей</p>
+									<p class="tabs-info__right">32 / 100 000</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по минусу)</p>
+									<p class="tabs-info__right">3*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по плюсу)</p>
+									<p class="tabs-info__right">1*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Аналоговые входы (АЦП)</p>
+									<p class="tabs-info__right">1*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по минусу)</p>
+									<p class="tabs-info__right">1*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по плюсу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">UART</p>
+									<p class="tabs-info__right">Опционально</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS232</p>
+									<p class="tabs-info__right">Опционально*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS485</p>
+									<p class="tabs-info__right">Есть (вместо CAN)</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">CAN</p>
+									<p class="tabs-info__right">Есть (вместо RS485)</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">1-WIRE</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">USB</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Акселерометр (датчик движения)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Термодатчик встроенный</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Голосовая связь</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Вес, грамм</p>
+									<p class="tabs-info__right">50</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Габариты, мм</p>
+									<p class="tabs-info__right">70 х 52 х 22</p>
+								</li>
+							</ul>
+							<p class="tabs-info__text"><b>Программные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Удаленная настройка, обновление ПО (WEB) </p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Программа ПК для настройки (USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Мобильное приложение (BlueTooth или USB)</p>
+									<p class="tabs-info__right">есьб</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые протоколы</p>
+									<p class="tabs-info__right">INTERNAL, EXTERNAL, USER_AG, EGTS</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество серверов мониторинга</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество ДУТ по RS232</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество ДУТ по RS485 </p>
+									<p class="tabs-info__right">8</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество датчиков по 1-WIRE</p>
+									<p class="tabs-info__right">8</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество датчиков по BlueTooth (BLE)</p>
+									<p class="tabs-info__right">10</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые беспроводные датчики (BLE)</p>
+									<p class="tabs-info__right tabs-info__right_wrap">ARNAVI BLE-LLS, ARNAVI BTS v.3, ARNAVI
+										BLE-RELAY, ESCORT TL-BLE, ESCORT TD-BLE, ESCORT DU-BLE, Teltonika Eye Sensor, Mielta
+										Fantom BLE, ITALON BLE, Gicam BLE</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">EcoDriving (стиль вождения)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Режим энергосбережения</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+
+								<li>
+									<p class="tabs-info__left">Подключение тахографа Штрих</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Подключение DTA CAN</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Подключение CAN-LOG</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка фотокамер ZM, VC0607</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка реф. установки MicroLink 3</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка считывателя меток RFID</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка счетчика пассажиропотока ПП01</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Отслеживание эвакуации авто</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/integral-4/INT4_manual-RUS_1.0.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="../download/arnavi-5/GOST-arnavi-5.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+								<a href="../download/integral-4/log.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Снятие лога с CAN - шины</p>
+								</a>
+								<a href="../download/integral-4/comander.xlsx" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Проброс команд</p>
+								</a>
+								<a href="../download/integral-4/217-0.16.dfw" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Прошивка</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

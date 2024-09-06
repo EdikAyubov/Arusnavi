@@ -1,0 +1,723 @@
+// Добавляем обнуляющий стиль
+// @import "nullstyle.scss";
+
+// Добавляем шрифтовые пары
+// @import "font.scss";
+
+// Добавляем шаблоны цветов
+@import "colors.scss";
+
+// СТРАНИЦА ПРОДУКТЫ
+.main-products {
+	background: url("../img/background.png") 0 0/ 100% 100% no-repeat;
+	padding: 250px 0 127px;
+	overflow: hidden;
+	@media screen and (max-width: 992px) {
+		// На адаптиве меняю расположение бекграунда что бы пропало видимое скругление
+		background: url("../img/background.png") center 20px / auto 100% no-repeat;
+	}
+	@media screen and (max-width: 639px) {
+		background: url("../img/background.png") center -70px / auto 100% no-repeat;
+		padding: 140px 0;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		color: #fff;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 57px;
+		letter-spacing: 0.1em;
+		margin-bottom: 30px;
+		max-width: 570px;
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__image {
+		max-width: 532px;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+// ВЫБОР ПРОДУКТОВ
+// Реализовано с помощью грида. Класс hide, hidden и hide-product отвечают за исчезновение продукта при выборе фильтров
+
+.categories {
+	padding-bottom: 60px;
+	@media screen and (max-width: 639px) {
+		padding-bottom: 30px;
+		margin-top: -100px;
+	}
+
+	&__row {
+		display: block;
+		@media screen and (max-width: 639px) {
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+		}
+	}
+
+	&__null {
+		display: none;
+		@media screen and (max-width: 639px) {
+			display: block;
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__icon {
+		display: none;
+		@media screen and (max-width: 639px) {
+			display: block;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 50px;
+		justify-self: center;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 40px;
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 470px 1fr;
+		grid-template-rows: 1470px;
+		overflow-y: auto;
+		column-gap: 30px;
+		position: relative;
+		@media screen and (max-width: 992px) {
+			grid-template-columns: 351px 1fr;
+		}
+		@media screen and (max-width: 639px) {
+			display: block;
+			max-height: 100%;
+		}
+	}
+}
+
+.tabs {
+	display: none;
+	@media screen and (max-width: 639px) {
+		display: block;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 60px;
+		@media screen and (max-width: 660px) {
+			// Оверфлоу позволяет прокручивать на мобилке ТАБЫ в сторону палцем
+			flex-wrap: nowrap;
+			overflow: auto;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		// Внешний вид кнопок табов
+		flex: 0 0 347px;
+		color: $text;
+		background: $bg-shape;
+		text-align: center;
+		border: 3px solid $bg-shape;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 50px;
+		transition-duration: 0.3s;
+		padding: 19px 0;
+		margin: 10px auto;
+		width: 347px;
+		font-weight: 600;
+		transition-duration: 0.3s;
+		cursor: pointer;
+		@media screen and (max-width: 992px) {
+			flex: 0 0 310px;
+		}
+		@media screen and (max-width: 639px) {
+			flex: 0 0 content;
+			padding: 9px 20px;
+			margin: 10px 7px;
+		}
+		&.active {
+			background: $link;
+			border: 3px solid $link;
+			color: #fff;
+		}
+		&:hover {
+			color: #fff;
+			background: $linkhover;
+			border: 3px solid $linkhover;
+			transition-duration: 0.3s;
+		}
+	}
+}
+
+// Блок фильтров на десктопе. Оверфлоу позволяет прокручивать ее вниз не делая страницу нереально большой
+// Класс height позволяет менять размер высоты блока при выборе определенных категорий
+
+.filter {
+	background: $bg;
+	border-radius: 25px;
+	padding: 30px;
+	overflow-y: auto;
+
+	@media screen and (max-width: 639px) {
+		display: none;
+	}
+	&.height {
+		max-height: 300px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		color: #fff;
+		margin-bottom: 10px;
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&__more {
+		color: #fff;
+		text-align: center;
+		cursor: pointer;
+		transition-duration: 0.3s;
+		margin-top: 10px;
+		&:hover {
+			color: $link;
+		}
+	}
+
+	&__hidden {
+		display: none;
+		& .active {
+			display: block;
+		}
+	}
+
+	&__items {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 13px;
+		@media screen and (max-width: 639px) {
+			display: none;
+		}
+	}
+
+	&__item {
+		background: $white;
+		color: $text;
+		border-radius: 30px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		padding: 10px 20px;
+		margin-bottom: 15px;
+		margin-right: 15px;
+		transition-duration: 0.3s;
+		cursor: pointer;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover {
+			background: $linkhover;
+			color: #fff;
+		}
+		&.active {
+			background: $linkhover;
+			color: #fff;
+		}
+	}
+
+	&__parameter {
+		margin-bottom: 20px;
+		div {
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.hide-product {
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+			}
+			input {
+				display: none;
+				&:checked + .radio__label::after {
+					// При клике на чекбокс галочка либо появится либо пропадет
+					opacity: 1;
+				}
+				&:checked + .check__label::after {
+					// При клике на чекбокс галочка либо появится либо пропадет
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__button {
+		display: block;
+		margin: 50px auto 0;
+		background: #ff7a7a;
+		max-width: 236px;
+		padding: 20px;
+		text-align: center;
+		font-weight: 600;
+		color: #fff;
+		border-radius: 30px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition-duration: 0.3s;
+		cursor: pointer;
+		@media screen and (max-width: 639px) {
+		}
+		&:hover {
+			background: #f25e50;
+		}
+		&.hide-product {
+			display: none;
+		}
+	}
+}
+
+// Класс отвечающий за внешний вид радиокнопок
+.radio {
+	&__label {
+		font-size: 20px;
+		line-height: 24px;
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 16px;
+			color: $text;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 2px solid #fff;
+			border-radius: 20px;
+			margin-right: 20px;
+			@media screen and (max-width: 639px) {
+				border-color: $link;
+				transform: scale(0.8);
+			}
+		}
+		&::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			position: absolute;
+			border-radius: 10px;
+			left: 5px;
+			opacity: 0;
+			@media screen and (max-width: 639px) {
+				background: $link;
+				transform: scale(0.8);
+			}
+		}
+	}
+}
+
+// Класс отвечает за стилизацию чекбокс кнопок
+
+.check {
+	&__label {
+		font-size: 20px;
+		line-height: 24px;
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 16px;
+			color: $text;
+			max-width: 200px;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+			min-height: 20px;
+			background: #fff;
+			border-radius: 5px;
+			margin-right: 20px;
+			@media screen and (max-width: 639px) {
+				background: $link;
+				transform: scale(0.8);
+			}
+		}
+		&::after {
+			content: "";
+			width: 14px;
+			height: 14px;
+			background: url("../img/check-cyan.svg") 0 0 / 100% 100% no-repeat;
+			position: absolute;
+			left: 3px;
+			opacity: 0;
+			@media screen and (max-width: 639px) {
+				background: url("../img/check.svg") 1px 2px / 80% 80% no-repeat;
+				transform: scale(0.8);
+			}
+		}
+	}
+}
+
+// Класс отвечающий за блок продуктов. Ограничен по высоте
+.product {
+	overflow: hidden;
+	height: 1470px;
+	@media screen and (max-width: 639px) {
+		max-height: 100%;
+	}
+
+	// Оверфлоу позволяет прокручивать содержимое блока не меняя высоты
+	&__body {
+		height: 1470px;
+		overflow-y: auto;
+		@media screen and (max-width: 639px) {
+			height: 100%;
+		}
+	}
+
+	&__block {
+		// Блоки сделаны с помощью Grid Layout
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto-fit, 1fr);
+		gap: 50px 30px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		@media screen and (max-width: 992px) {
+			padding: 0;
+			gap: 40px 20px;
+		}
+		@media screen and (max-width: 900px) {
+			padding: 0;
+			grid-template-columns: 1fr;
+			gap: 40px 20px;
+		}
+		@media screen and (max-width: 639px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(auto-fit, 1fr);
+			gap: 20px 10px;
+		}
+		&.active {
+			display: grid;
+		}
+	}
+
+	&__el {
+		// Внешний вид карточки товара
+		background: $bg-shape;
+		padding: 20px;
+		border-radius: 20px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		@media screen and (max-width: 639px) {
+			padding: 10px 20px;
+			border-radius: 10px;
+		}
+		&.hide-product {
+			display: none;
+		}
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 230px;
+		min-height: 230px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 5px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__name {
+		text-align: center;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		&_nowrap {
+			// Позволяет тексту неперноситься на другую строчку
+			white-space: nowrap;
+			@media screen and (max-width: 992px) {
+				white-space: unset;
+			}
+			@media screen and (max-width: 639px) {
+			}
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 25px;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		text-decoration-line: underline;
+		color: $link;
+		text-align: center;
+		display: block;
+		margin-bottom: 10px;
+		transition-duration: 0.3s;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+		}
+		&:hover {
+			text-decoration-line: underline;
+			color: $linkhover;
+		}
+	}
+
+	&__button {
+		font-size: 14px;
+		line-height: 17px;
+		padding: 10px 0;
+		max-width: 150px;
+		margin: 0 auto;
+		@media screen and (max-width: 639px) {
+			max-width: 104px;
+		}
+	}
+}
+
+// Сложная настройка поп-апа с фильтрами который существует только на мобилке и фильтрует только трекеры
+#filter-pop .popup__close::before,
+#filter-pop .popup__close::after {
+	background: $text;
+}
+
+#filter-pop {
+	padding-top: 100px;
+}
+
+.filter-pop {
+	&__content {
+		background: #fff;
+		padding: 50px 0 20px;
+		display: block;
+		border-radius: 18px 18px 0 0;
+	}
+
+	&__tab {
+		overflow-y: auto;
+		&.hide-product {
+			display: none;
+		}
+	}
+
+	&__categories {
+		overflow-y: auto;
+	}
+
+	&__parameter {
+		margin-bottom: 20px;
+		overflow-y: auto;
+
+		@media screen and (max-width: 639px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(auto-fit, 1fr);
+			row-gap: 20px;
+			padding: 0 10px;
+		}
+		@media screen and (max-width: 375px) {
+			display: block;
+			padding: 0 20px;
+		}
+		div {
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			input {
+				display: none;
+				&:checked + .radio__label::after {
+					// При клике на чекбокс галочка либо появится либо пропадет
+					opacity: 1;
+				}
+				&:checked + .check__label::after {
+					// При клике на чекбокс галочка либо появится либо пропадет
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__enter {
+		grid-row: 1/3;
+		@media screen and (max-width: 375px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__antenna {
+		grid-column: 2/3;
+		@media screen and (max-width: 375px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__modem {
+		@media screen and (max-width: 375px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__interface {
+		display: grid;
+		grid-column: 1/3;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto-fit, 1fr);
+		column-gap: 15px;
+		@media screen and (max-width: 374px) {
+			column-gap: 40px;
+		}
+		& .filter-pop__title {
+			grid-column: 1/3;
+		}
+	}
+
+	&__function {
+		display: grid;
+		grid-column: 1/3;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto-fit, 1fr);
+		column-gap: 15px;
+		& .filter-pop__title {
+			grid-column: 1/3;
+		}
+	}
+
+	&__line {
+		grid-column: 1/3;
+		width: 50%;
+		height: 0.5px;
+		opacity: 0.3;
+		background: $text;
+		margin: 10px auto;
+		@media screen and (max-width: 375px) {
+			opacity: 0;
+		}
+	}
+
+	&__title {
+		@media screen and (max-width: 639px) {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 19px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__hidden {
+		display: grid;
+		grid-column: 1/3;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto-fit, 1fr);
+		column-gap: 15px;
+		max-height: 0;
+		overflow: hidden;
+
+		&.active {
+			max-height: none;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(auto-fit, 1fr);
+			column-gap: 15px;
+			grid-column: 1/3;
+		}
+	}
+
+	&__more {
+		grid-column: 1/3;
+		text-align: center;
+		cursor: pointer;
+		transition-duration: 0.3s;
+		margin-top: 20px;
+		font-size: 16px;
+		&:hover {
+			color: $link;
+		}
+	}
+
+	&__button {
+		padding: 13px;
+		font-weight: 600;
+		background: $link;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		display: block;
+		max-width: 156px;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 14px;
+		line-height: 16px;
+		border-radius: 20px;
+		color: #fff;
+	}
+	&__reset {
+		text-align: center;
+		display: block;
+		margin: 15px auto;
+		font-weight: 700;
+		color: #f25e50;
+	}
+}

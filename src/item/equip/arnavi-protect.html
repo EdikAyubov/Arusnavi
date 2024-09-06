@@ -1,0 +1,155 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Блок защиты Arnavi Protect</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.css" />
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Дополнительное оборудование</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-protect.html"><span>Arnavi Protect</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI PROTECT</h2>
+						<h3 class="main-equip__subtitle">Блок защиты</h3>
+						<p class="main-equip__text">Устройство защиты оборудования от предельно допустимых значений
+							постоянного прямого и обратного напряжений.</p>
+						<a href="#request-protect" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-protect.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text">Устройство предназначено для защиты цепей питания подключаемого через
+								него оборудования от предельно допустимых значений постоянного прямого и обратного напряжений,
+								которые могут возникнуть в неисправных цепях питания бортовой сети автомобиля и других
+								источников питания.</p>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры</p>
+									<p class="tabs-info__right">16 х 15 х 51</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания</p>
+									<p class="tabs-info__right">5 - 34 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Масса</p>
+									<p class="tabs-info__right">20 г</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">-40 ... +80 °C</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Предельное отрицательное входное напряжение</p>
+									<p class="tabs-info__right">1000 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Допустимое постоянно удерживаемое напряжение на входе</p>
+									<p class="tabs-info__right">400 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Предельное кратковременное положительное входное напряжение</p>
+									<p class="tabs-info__right">500 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Отключение подачи тока на выход при входном напряжении более</p>
+									<p class="tabs-info__right">34 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Падение напряжения между входом и выходом устройства не более</p>
+									<p class="tabs-info__right">1,3 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Ток ограничения по входу</p>
+									<p class="tabs-info__right">0,5 А</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Термозащита при удержании среднего тока не менее</p>
+									<p class="tabs-info__right">0,5 А</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-protect/Arnavi-protect-1.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

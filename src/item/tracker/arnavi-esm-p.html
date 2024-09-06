@@ -1,0 +1,175 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Навигационный контроллер Arnavi ESM-P</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI ESM-P</h2>
+						<h3 class="main-equip__subtitle">Модуль запуска</h3>
+						<p class="main-equip__text">Универсальный модуль дистанционного запуска двигателя.</p>
+						<a href="#request-esm-p" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-esm-p.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text"><span>Особенности Arnavi ESM-P:</span></p>
+							<ul class="tabs-info__list">
+								<li>ARNAVI ESM-P - это универсальный модуль дистанционного запуска двигателя, разработанный
+									российскими программистами и инженерами;</li>
+								<li>Оборудование не требует в своей работе использования внешних обходчиков штатного
+									иммобилайзера, способно в момент дистанционного запуска двигателя осуществить временный
+									бесключевой алгоритмический обход иммобилайзера по LIN или CAN шине автомобиля, не снижая
+									эффективную работу штатных противоугонных систем;</li>
+								<li>Управление возможно с помощью штатного брелока, брелока любой сигнализации или GPS трекера
+									АвтоОко24. При использовании модуля в системе АвтоОко24 управление осуществляется при
+									использовании разработанного специализированного приложения для платформ Android и iOS;</li>
+								<li>Используя мобильное приложение АвтоОко24 возможно не только оперативно отслеживать текущее
+									местоположение автомобиля, но и строить пройденные маршруты, а так же отслеживать другие
+									параметры (напряжение аккумуляторной батареи ТС, температуру в салоне (или двигателя),
+									скорость движения и общий пробег автомобиля);
+								</li>
+								<li>Так же в приложении АвтоОко24 будет в режиме on-line отображаться статус открытия (капота,
+									двери);</li>
+								<li>Система дистанционного запуска двигателя Arnavi ESM-P поддерживает широкий перечеь
+									автомобилей с дизельными и бензиновыми двигателями. Среди поддержимаемых марок есть:
+									Chevrolet, Hyundai, Kia, Lada, Lexus, Nissan, Reanult, Toyota и другие;</li>
+								<li>Так же модуль может быть установлен на любой автомобиль не входящий в текущий список
+									поддержки при использовании классического ключевого обходчика для штатного иммобилайзера и
+									подключение всех необходимых цепей по отдельным проводам без использования CAN шины.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Напряжение питания</p>
+									<p class="tabs-info__right">от 10 до 18 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Максимальный ток потребления</p>
+									<p class="tabs-info__right">не более 150 мА</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Номинальный постоянный ток коммутации в силовых цепях (зажигание,
+										АСС, стартер и доп. реле)</p>
+									<p class="tabs-info__right">20А</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от "переполюсовки" питания</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита при превышении напряжения питания, В</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Длительность превышения допустимого напряжения</p>
+									<p class="tabs-info__right">10 секунд</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от импульсных скачков напряжения</p>
+									<p class="tabs-info__right"></p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Максимальный импульсный ток</p>
+									<p class="tabs-info__right">50А</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Длительность импульса</p>
+									<p class="tabs-info__right">5 секунд</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Степень защиты корпуса</p>
+									<p class="tabs-info__right">IP 53</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Диапазон рабочих температур</p>
+									<p class="tabs-info__right">-40...+80</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-esm-p/arnavi-esm-p.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Инструкция</p>
+								</a>
+								<a href="../download/arnavi-esm-p/decloration.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Декларация о соответствии</p>
+								</a>
+								<a href="../download/arnavi-esm-p/GOST-ESM-P.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

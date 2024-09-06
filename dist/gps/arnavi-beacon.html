@@ -1,0 +1,1331 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Автономное спутниковое устройство Arnavi Beacon</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		<header id="header" class="header">
+	<div class="container">
+		<div class="header__row">
+			<div class="header__logo">
+				<a href="../index.html"><img src="../img/logo.svg" alt="ArusNavi"></a>
+			</div>
+			<div class="header__logo-color">
+				<a href="../index.html"><img src="../img/logo-color.svg" alt="ArusNavi"></a>
+			</div>
+			<ul class="header__menu">
+				<li>
+					<a href="../index.html#main" class="header__link" onclick="slowScroll('#main')">Главная</a>
+					<div class="header__line"></div>
+				</li>
+				<li>
+					<a href="../index.html#advantage" class="header__link"
+						onclick="slowScroll('#advantage')">Преимущества</a>
+					<div class=" header__line">
+					</div>
+				</li>
+				<li>
+					<a href="../products.html" class="header__link">Продукты</a>
+					<div class=" header__line">
+					</div>
+				</li>
+				<li>
+					<a href="../gelios-page.html" class="header__link">Gelios</a>
+					<div class=" header__line"></div>
+				</li>
+				<li>
+					<a href="http://8888.arusnavi.ru" target="_blank" class="header__link">Материалы</a>
+					<div class=" header__line"></div>
+				</li>
+				<li>
+					<a href="#contacts" class="header__link" onclick="slowScroll('#contacts')">Контакты</a>
+					<div class=" header__line"></div>
+				</li>
+				<li>
+					<a href="https://t.me/ArusnaviSupport_bot" target="_blank" class="header__link button-white">
+						<p>Техподдержка</p>
+					</a>
+				</li>
+			</ul>
+			<div class="header__bg-burger">
+				<div class="header__burger">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">GPS-маяки</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-tag.html"><span>Arnavi Beacon</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI BEACON</h2>
+						<h3 class="main-equip__subtitle">Автономное спутниковое устройство</h3>
+						<p class="main-equip__text">Маяк Arnavi BEACON – это портативное автономное спутниковое
+							устройство, предназначено для определения точного местоположения объекта. Передача владельцу
+							координат объекта осуществляется по протоколу GPRS.</p>
+						<a href="#request-arnavi-beacon" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/tracker/arnavi-beacon.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text">Маяк Arnavi BEACON – это портативное автономное спутниковое устройство,
+								предназначено для определения точного местоположения объекта. Передача владельцу координат
+								объекта осуществляется по протоколу GPRS. </p>
+							<p class="tabs-info__text">Маяк Anravi BEACON может быть использован в следующих целях :
+							</p>
+							<ul class="tabs-info__list">
+								<li>Определение местоположения транспортных средств;</li>
+								<li>Защита от угона и обнаружение угнанных транспортных средств;</li>
+								<li>Мониторинг передвижения посылок, грузов и их поиск в случае утери;</li>
+								<li>Контроль личного багажа;</li>
+								<li>Контроль за животными;</li>
+								<li>Обеспечение сохранности автоматов самообслуживания, мобильных витрин, электрогенераторов.
+								</li>
+							</ul>
+							<p class="tabs-info__text">Размещается на объекте мониторинга (например, в автомобиле), не требует
+								подключения к бортовой сети объекта.</p>
+							<p class="tabs-info__text">В случае угона или контроля, маяк дает возможность определить точное
+								местоположение объекта</p>
+
+							<p class="tabs-info__text">Для определения местоположения использует навигационную систему
+								GPS/GLONASS, в случаях, когда объект попадает в зону отсутствия GPS сигнала (подземный паркинг,
+								гаражный бокс) местоположение определится при помощи технологии LBS позиционирования.</p>
+
+							<p class="tabs-info__text">Устройство использует стандартный типоразмер батареек - АА
+								(пальчиковые).</p>
+							<p class="tabs-info__text">Пользователю доступны три режима:</p>
+							<ul class="tabs-info__list">
+								<li><span>Интервальный</span> - выходит на связь строго по заданному интервалу (например: раз в
+									сутки/каждый час);</li>
+								<li><span>Активный</span> - передает события срабатывания датчика движения (например: при начале
+									и/или завершении движения);</li>
+								<li><span>Онлайн</span> - работает по принципу трекера: отработка траектории по углу, скорости,
+									расстоянию, времени (грубый трек).</li>
+							</ul>
+							<p class="tabs-info__text">Маяк Arnavi BEACON выполнен в виде моноблока, поставляется с
+								интегрированным SIM-чипом, который работает практически в любой стране мира!</p>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<p class="tabs-info__text"><b>Аппаратные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Модуль GSM</p>
+									<p class="tabs-info__right">2G</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна GSM</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество SIM карт (чипов)</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль навигации</p>
+									<p class="tabs-info__right">GPS | ГЛОНАСС</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна навигации</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль BlueTooth (BLE)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна BlueTooth</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна WiFi</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">10.8-11.3</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Среднее потребление
+										(режим сна - активный режим), мА</p>
+									<p class="tabs-info__right">0.005 - 30</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Резервный АКБ, мА</p>
+									<p class="tabs-info__right">7800</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Объем черного ящика, Мб / кол-во записей</p>
+									<p class="tabs-info__right">8 / 12000</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по минусу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по плюсу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Аналоговые входы (АЦП)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по минусу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по плюсу)</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">UART</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS232</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS485</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">CAN</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">1-WIRE</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">USB</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Акселерометр (датчик движения)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Термодатчик встроенный</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Голосовая связь</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Вес, грамм</p>
+									<p class="tabs-info__right">140</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Габариты, мм</p>
+									<p class="tabs-info__right">D78 х H23</p>
+								</li>
+							</ul>
+							<p class="tabs-info__text"><b>Программные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Удаленная настройка, обновление ПО (WEB) </p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Программа ПК для настройки (USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Мобильное приложение (BlueTooth или USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые протоколы</p>
+									<p class="tabs-info__right">INTERNAL</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество серверов мониторинга</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-beacon/Beacon3_WLP_0.1.wlp" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/wialon.svg" alt="">
+										<img src="../img/products/wialon-white.svg" alt="">
+									</div>
+									<p>Шаблон объекта (wlp)</p>
+								</a>
+								<a href="../download/arnavi-beacon/Arnavi_Beacon3_0.3.9.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="../download/arnavi-beacon/declaration-beacon.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Декларация о соответствии</p>
+								</a>
+								<a href="../download/arnavi-beacon/certificate-beacon.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+								<a href="http://8888.arusnavi.ru/Configurator/" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Конфигуратор</p>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		<!-- Поп ап для блока почему бесплатно форма обратной связи -->
+<div id="request-popup" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Ccылка со страницы">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi 6 -->
+<div id="request-arnavi-6" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi 6">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Arnavi Integral 4 -->
+<div id="request-arnavi-integral-4" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi Integral 4">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi Beacon -->
+<div id="request-arnavi-beacon" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi Beacon">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Arnavi Avtooko24 -->
+<div id="request-avtooko24" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi Avtooko24">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi A-series -->
+<div id="request-a-series" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi A-Series">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi LS-2DF DUT -->
+<div id="request-ls-2df" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi ДУТ LS-2DF">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi CAN -->
+<div id="request-can" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi CAN">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi УНУ -->
+<div id="request-unu" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi УНУ">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi ESM-P -->
+<div id="request-esm-p" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi ESM-P">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi TEMPERATURE -->
+<div id="request-temperature" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi TEMPERATURE">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- ARNAVI BTS v.3 -->
+<div id="request-ble-termo" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="ARNAVI BTS v.3">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi WI-FI -->
+<div id="request-wi-fi" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi Wi-Fi">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi BLE-Relay -->
+<div id="request-ble-relay" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi BLE-Relay">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi PLC -->
+<div id="request-plc" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi BLE-Relay">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- РЕЛЕ БЛОКИРОВКИ -->
+<div id="request-block" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Реле Блокировки">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Arnavi Protecrt -->
+<div id="request-protect" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Arnavi Protect">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Jiahe Camera -->
+<div id="request-camera" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Камера Jiahe Camera">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Микрофон Ritmix -->
+<div id="request-ritmix" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Микрофон Ritmix">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Тревожная кнопка -->
+<div id="request-alarm-button" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<p class="popup__name">Оставьте заявку и менеджер с вами свяжется</p>
+			<form id="request-form-popup" action="" class="popup__form" action="#" method="post"
+				enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ArusNavi">
+				<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+				<input type="hidden" name="form_subject" value="Тревожная кнопка">
+				<!-- END Hidden Required Fields -->
+				<div class="popup__item">
+					<input id="formName" type="text" name="name" placeholder="Введите ваше имя" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formEmail" type="text" name="email" placeholder="Введите ваш e-mail" class="popup__input">
+				</div>
+				<div class="popup__item">
+					<input id="formPhone" type="tel" name="phone" placeholder="Введите ваш номер телефона"
+						class="popup__input">
+				</div>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="formAgreement" class="checkbox__label"><span class="form-text">Я даю свое согласие на
+								обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+				<button class="popup__button button-white">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+		<!-- Добавляем футтер -->
+		<!-- Блок Контакты с картой -->
+<div class="contacts" id="contacts">
+	<div class="container">
+		<h2 class="contacts__title title">Контакты</h2>
+		<div class="contacts__row">
+			<div class="contacts__info">
+				<!-- <p class="contacts__text">Мы будем рады вас видеть в офисе нашей компании, однако если вам так удобнее вы
+					можете связаться с нами любым другим способом: </p> -->
+				<div class="footer__info">
+					<div class="footer__item">
+						<h3 class="footer__label">Техподдержка по оборудованию</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:support@arusnavi.ru" class="footer__link">support@arusnavi.ru</a>
+							</li>
+							<li>
+								<img src="../img/contacts/telegram.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="https://t.me/ArusnaviSupport_bot" class="footer__link">@ArusnaviSupport_bot</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Техподдержка ПО</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:support@geliossoft.ru" class="footer__link">support@geliossoft.ru</a>
+							</li>
+							<li>
+								<img src="../img/contacts/telegram.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="https://t.me/geliossoft_bot" class="footer__link">@geliossoft_bot</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Отдел логистики</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="../img/contacts/telephone.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="tel:79645007084" class="footer__link">+7 (964) 500-70-84
+								</a>
+							</li>
+							<li>
+								<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:logist@arusnavi.ru" class="footer__link">logist@arusnavi.ru</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Менеджер по оптовой закупке</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="../img/contacts/telephone.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="tel:79096215911" class="footer__link">+7 (909) 621-59-11</a>
+							</li>
+							<li>
+								<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:89096215911@arusnavi.ru" class="footer__link">89096215911@arusnavi.ru</a>
+							</li>
+							<li>
+								<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:sales@arusnavi.ru" class="footer__link">sales@arusnavi.ru</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Карта -->
+			<div class="contacts__map">
+				<div class="contants__block">
+					<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e597429992c29338bca6f5de080054ecaaa96aa291bc4bd20152c06cc976cd0&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Блок Оставить заявку -->
+<div class="request">
+	<div class="container">
+		<h2 class="request__title title">Оставить заявку</h2>
+		<form action="#" class="request__form" id="request-form" method="post" enctype="multipart/form-data">
+			<!-- Обязательный блок для формы он скрыт и не виден но существует -->
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="ArusNavi">
+			<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+			<input type="hidden" name="form_subject" value="footer form">
+			<!-- END Hidden Required Fields -->
+			<div class="request__row">
+				<div class="request__left">
+					<input type="text" name="Name" placeholder="Ваше имя" class="request__input">
+					<input type="text" name="Email" placeholder="E-mail" class="request__input">
+					<input type="tel" name="Phone" placeholder="Номер телефона" class="request__input">
+				</div>
+				<textarea name="Question" placeholder="Задать свой вопрос..." class="request__textarea"></textarea>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="requestAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="requestAgreement" class="checkbox__label req"><span class="form-text">Я даю свое согласие
+								на обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+			</div>
+			<button class="request__button button-white">Отправить</button>
+		</form>
+	</div>
+</div>
+<!-- Футтер -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__logo">
+			<a href="index.html"><img src="../img/logo.svg" alt=""></a>
+		</div>
+		<!-- Контакты -->
+		<div class="footer__info">
+			<div class="footer__item">
+				<h3 class="footer__label">Техподдержка по оборудованию</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:support@arusnavi.ru" class="footer__link">support@arusnavi.ru</a>
+					</li>
+					<li>
+						<img src="../img/contacts/telegram.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="https://t.me/ArusnaviSupport_bot" class="footer__link">@ArusnaviSupport_bot</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Техподдержка ПО</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:support@geliossoft.ru" class="footer__link">support@geliossoft.ru</a>
+					</li>
+					<li>
+						<img src="../img/contacts/telegram.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="https://t.me/geliossoft_bot" class="footer__link">@geliossoft_bot</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Отдел логистики</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="../img/contacts/telephone.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="tel:79645007084" class="footer__link">+7 (964) 500-70-84
+						</a>
+					</li>
+					<li>
+						<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:logist@arusnavi.ru" class="footer__link">logist@arusnavi.ru</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Менеджер по оптовой закупке</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="../img/contacts/telephone.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="tel:79096215911" class="footer__link">+7 (909) 621-59-11</a>
+					</li>
+					<li>
+						<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:89096215911@arusnavi.ru" class="footer__link">89096215911@arusnavi.ru</a>
+					</li>
+					<li>
+						<img src="../img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="../img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:sales@arusnavi.ru" class="footer__link">sales@arusnavi.ru</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Соц сети -->
+		<div class="footer__row">
+			<div class="footer__facebook">
+				<img src="../img/social/facebook.svg" class="footer__notact" alt="">
+				<a href="https://www.facebook.com/arusnavi" target="_blank"><img src="../img/social/facebook-act.svg"
+						class="footer__act" alt=""></a>
+			</div>
+			<div class="footer__instagram">
+				<img src="../img/social/instagram.svg" class="footer__notact" alt="">
+				<a href="https://instagram.com/arusnavi.ru?igshid=YmMyMTA2M2Y=" target="_blank"><img
+						src="../img/social/instagram-act.svg" class="footer__act" alt=""></a>
+			</div>
+			<div class="footer__vk">
+				<img src="../img/social/vk.svg" class="footer__notact" alt="">
+				<a href="https://vk.com/arusnavi" target="_blank"><img src="../img/social/vk-act.svg" class="footer__act"
+						alt=""></a>
+			</div>
+		</div>
+		<div class="footer__line"></div>
+		<p class="footer__copyright">Copyright © 2022 ArusNavi. Все права защищены</p>
+	</div>
+</footer>
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Беспроводной универсальный датчик Arnavi BTS v.5</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Контроль температуры</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-BTS v3.html"><span>Arnavi BTS v.5</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI BTS v.5</h2>
+						<h3 class="main-equip__subtitle">Беспроводной универсальный датчик</h3>
+						<p class="main-equip__text">Универсальный беспроводной датчик, с возможностью приминения в различных
+							ситуациях и условиях. Применяетк как термодатчик, как датчик контроля цепи или радио метка.</p>
+						<a href="#request-ble-termo" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-bts5.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li><b>BTS v.5</b> - BLE беспроводной температурный датчик для контроля температуры в авто,
+									рефрижераторах и стационарных объектах.
+								</li>
+								<li><b>BTS v.5</b> - BLE метка для удобного обнаружения и идентификации объектов. Настройка
+									параметров: UUID, MAJOR, MINOR.
+								</li>
+								<li><b>BTS v.5</b> - BLE датчик контроля работы механизмов, внешнего навесного оборудования,
+									датчик открытия/закрытия дверей.</li>
+								<li>Заменяемая батарейка CR2477.</li>
+								<li>Настраиваемые параметры: интервал и мощность передачи.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<p class="tabs-info__text"><b>Основные характеристики:</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры</p>
+									<p class="tabs-info__right">61 x 42 x 13мм</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Элемент питания</p>
+									<p class="tabs-info__right">900-1000 мА</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Канал передачи данных</p>
+									<p class="tabs-info__right">BLE 4.2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Масса, грамм</p>
+									<p class="tabs-info__right">30</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура, ºC</p>
+									<p class="tabs-info__right">от -20 до +60</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Мощность передатчика</p>
+									<p class="tabs-info__right">3 дБм</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Контроль цепи</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Магнитный датчик</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+							</ul>
+							<p class="tabs-info__text"><b>Время работы элемента питания в зависимости от температуры:</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Морозилка -5 °C... -15°C</p>
+									<p class="tabs-info__right">400 дней</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Холодильник 0 °C... +5°C</p>
+									<p class="tabs-info__right">700 дней</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Комната +15 °C... +25°C</p>
+									<p class="tabs-info__right">1 500 дней</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Тесты, проведенные в лабораторных условиях, показали данные
+										результаты по сроку эксплуатации на одном элементе питания</p>
+
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-BTS v3/manual_BTS_v5.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="../download/ls-2df/GOST-LS-2DF.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+								<!--								<a href="../download/arnavi-BTS v3/Configurator_release.apk" class="tabs-info__button"-->
+								<!--									target="_blank">-->
+								<!--									<div class="tabs-info__icon">-->
+								<!--										<img src="../img/products/download-icon.svg" alt="">-->
+								<!--										<img src="../img/products/download-icon-white.svg" alt="">-->
+								<!--									</div>-->
+								<!--									<p>Конфигуратор для BLE Termo V4</p>-->
+								<!--								</a>-->
+								<a href="https://apps.apple.com/ru/app/sensor-configurator/id6449972693"
+									class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/apple-icon.svg" alt="">
+										<img src="../img/products/apple-icon-white.svg" alt="">
+									</div>
+									<p>Конфигуратор на IOS</p>
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=com.gelios.configurator"
+									class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/android-icon.svg" alt="">
+										<img src="../img/products/android-icon-white.svg" alt="">
+									</div>
+									<p>Конфигуратор на Android</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Навигационный контроллер Avtooko24</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">AVTOOKO24</h2>
+						<h3 class="main-equip__subtitle">Навигационный котроллер</h3>
+						<p class="main-equip__text">Автомобильная спутниковая система дистанционного управления и мониторинга
+						</p>
+						<a href="#request-avtooko24" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/tracker/avtooko24.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text"><span>Особенности Avtooko24:</span></p>
+							<ul class="tabs-info__list">
+								<li>Навигационный терминал для персонального использования, разработанный на базе контроллера
+									"ARNAVI INTEGRAL" 4;</li>
+								<li>Функциональных отличий между этими устройствами нет. Трекер "АВТООКО24" отличается только
+									специальной прошивкой, в которой реализованы алгоритмы для вычисления возможных эвакуации или
+									угона. Кроме того, данное устройство имеет возможность подключения блока удаленного
+									автозапуска двигателя (обходчик иммобилайзера) и системы предпускового подогрева автомобиля;
+								</li>
+								<li>Одно из важных принципиальных отличий этого терминала это отсутствие возможности его
+									подключения к web-версии программного обеспечения, только к специализированному мобильному
+									приложению "АвтоОко24" с автоматическим созданием учетных записей, объектов, биллинга и
+									возможности оплаты картой прямо из приложения;</li>
+								<li>Это принципиально новое решение на рынке спутникового мониторинга, адаптированное для
+									использования физическими лицами - автовладельцами, которое, благодаря своей лояльной ценовой
+									политике составляет хорошую конкуренцию спутниковым автосигнализациям с автозапуском.
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры</p>
+									<p class="tabs-info__right">70 х 53 х 22 мм</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания</p>
+									<p class="tabs-info__right">8 - 40 В</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Масса</p>
+									<p class="tabs-info__right">52 г</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретный вход</p>
+									<p class="tabs-info__right">1 шт.</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретный выход</p>
+									<p class="tabs-info__right">2 шт.</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">-40 ... +80 °C</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс UART</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс RS232</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс 1-WIRE</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс USB</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество слотов SIM карт</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество слотов SIM чип</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Энергонезависимая память</p>
+									<p class="tabs-info__right">32 Мб</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/avtooko24/declaration.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Декларация о соответствии</p>
+								</a>
+								<a href="../download/avtooko24/avtooko24.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Инструкция</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

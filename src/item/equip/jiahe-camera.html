@@ -1,0 +1,178 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Фотокамера JIAHE CAMERA</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Дополнительное оборудование</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="jiahe-camera.html"><span>Jiahe Camera</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">JIAHE CAMERA</h2>
+						<h3 class="main-equip__subtitle">Фотокамера</h3>
+						<p class="main-equip__text">Фотокамера с фунцкцией автоматической подсветки (для ночной съемки).
+							Устройство совместимо с навигационными контроллерами любых производителей.</p>
+						<a href="#request-camera" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/jiahe-camera.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li>Фотокамера с фунцкцией автоматической подсветки (для ночной съемки);</li>
+								<li>Диапазон разрешения фотографий от 160x120 до 640х480. Устройство совместимо с навигационными
+									контроллерами любых производителей, поддерживающими цифровой интерфейс RS-232. Оборудование
+									оснащено пыле-влаго-защищенным корпусом со степенью защиты IP67;</li>
+								<li>Фотокамера имеет режим автоматической работы с настраиваемой периодичностью снимков
+									(например каждые 10 минут), а также доступен ручной запрос фотографий (по команде).</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Размер пикселя</p>
+									<p class="tabs-info__right">PAL: 628x582 / NTSC: 510 x 492</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Разрешение</p>
+									<p class="tabs-info__right">640х480 / 320х240 / 160х120</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Датчик изображение</p>
+									<p class="tabs-info__right">1/4''</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Выход</p>
+									<p class="tabs-info__right">RS232</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Скорость передачи</p>
+									<p class="tabs-info__right">9 600 ~ 115 200 bps</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Яркость</p>
+									<p class="tabs-info__right">> 1.0 lux</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Формат изображения</p>
+									<p class="tabs-info__right">JPEG</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочее напряжение</p>
+									<p class="tabs-info__right">5.0V</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочий ток LED OFF</p>
+									<p class="tabs-info__right">90 mA</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочий ток LED ON</p>
+									<p class="tabs-info__right">300 mA</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Инфракрасный светодиод</p>
+									<p class="tabs-info__right">12 pieces</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Фокусное расстояние</p>
+									<p class="tabs-info__right">3.6 mm</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Угол обзора</p>
+									<p class="tabs-info__right">110</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Водоустойчивый уровень</p>
+									<p class="tabs-info__right">IP67</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Относительная влажность</p>
+									<p class="tabs-info__right">20% ~ 80% R.H</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Операционная температура</p>
+									<p class="tabs-info__right">-20 ~ +70 °C</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/jiahe-camera/description.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Техническое описание</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

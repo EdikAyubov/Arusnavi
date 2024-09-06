@@ -1,0 +1,191 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Модуль Arnavi WIFI</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Дополнительное оборудование</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-wifi.html"><span>Arnavi Wi-Fi</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI WI-FI</h2>
+						<h3 class="main-equip__subtitle">Модуль</h3>
+						<p class="main-equip__text">Внешнее устройство для обеспечения wi-fi соединения в местах, где
+							отсутствует покрытие мобильных операторов.</p>
+						<a href="#request-wi-fi" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-wifi.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li>Внешнее устройство для обеспечения wi-fi соединения в местах, где отсутствует покрытие
+									мобильных операторов;</li>
+								<li>Оборудование устроено таким образом, что можно внести логин и пароль wi-fi сети, при наличии
+									соединения с этой сетью модуль будет подключаться и выгружать накопленные сообщения с трекера
+									на сервер мониторинга;</li>
+								<li>Такое решение может быть актуальным для автомобилей, которые работают в тайге или на далеком
+									севере, где слабое/отсутствующее покрытие мобильных операторов. Например, на базе установлен
+									мощный wi-fi роутер со спутниковым интернетом, ТС в течение дня накапливают информацию о
+									передвижении, скорости, расходе топлива и т.д, по возвращению на базу трекеры автоматически
+									подключатся к спутниковому интернету через роутер и произведут выгрузку данных;</li>
+								<li>Данное решение узкоспециализированное, не для широкого применения, но очень актуально для
+									некоторых условий эксплуатации техники.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры, мм (без учета антенны и жгута)</p>
+									<p class="tabs-info__right">83,5 x 57,5 x 24</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">7 .. 32</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита при превышении напряжения питания, В</p>
+									<p class="tabs-info__right">55</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от "переполюсовки" питания</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от импульсных скачков напряжения, В</p>
+									<p class="tabs-info__right">600</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Пиковый ток потребления при напряжении 12В, мА</p>
+									<p class="tabs-info__right">100</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Вход включения/выключения</p>
+									<p class="tabs-info__right">от -40 до + 85 °C</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Чип</p>
+									<p class="tabs-info__right">ESP8266EX</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Режимы работы</p>
+									<p class="tabs-info__right">STA/AP/STA+AP</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">WiFi-стандарт</p>
+									<p class="tabs-info__right">802.11 b/g/n, Wi-Fi 2.4 ГГц, поддержка WPA/WPA2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Разъем подключения внешней антенны WiFi</p>
+									<p class="tabs-info__right">SMA</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс RS232</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс USB</p>
+									<p class="tabs-info__right">опционально</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-wifi/WiFi.zip" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>ПО для сбора данных с приборов</p>
+								</a>
+								<a href="../download/arnavi-wifi/manual_soft-wifi-1.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство по установке ПО</p>
+								</a>
+								<a href="../download/arnavi-wifi/plati-1.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

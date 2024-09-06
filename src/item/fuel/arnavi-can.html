@@ -1,0 +1,208 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Считыватель Arnavi CAN</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Дополнительное оборудование</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-can.html"><span>Arnavi CAN</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI CAN</h2>
+						<h3 class="main-equip__subtitle">Считыватель</h3>
+						<p class="main-equip__text">Внешнее устройство для считывания информации с бортового компьютера
+							автомобиля, устанавливается совместно с навигационными контроллерами любых производителей.</p>
+						<a href="#request-can" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/fuel/arnavi-can.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li>Внешнее устройство для считывания информации с бортового компьютера автомобиля,
+									устанавливается совместно с навигационными контроллерами любых производителей;</li>
+								<li>Подходит как для считывания базовых параметров (моточасы, расход топлива, пробег и т.д.),
+									так и для специализированных (нагрузка на ось, поворотники, ремни безопасности). Данное
+									устройство удобно наличием сразу двух самых популярных цифровых интерфейсов RS-232 и RS-485,
+									что увеличивает спектр совместимого оборудования;</li>
+								<li>"ARNAVI CAN" подходит для любого типа техники (от легковых авто до спецтехники), все модели
+									автомобилей поддерживались путем интеграции протоколов разных ТС, что увеличивает точность
+									передаваемой информации и перечень считываемых параметров;</li>
+								<li>На сегодняшний день есть список машин 300+ уже поддержаных в этом устройстве, но по запросу
+									разработчики могут добавить любой недостающий автомобиль.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры, мм (без учета антенны и жгута)</p>
+									<p class="tabs-info__right">55 х 50 х 22.5</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">9 .. 40</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита при превышении напряжения питания, В</p>
+									<p class="tabs-info__right">55</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от "переполюсовки" питания</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Защита от импульсных скачков напряжения, В</p>
+									<p class="tabs-info__right">600</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Максимальный ток потребления, мА</p>
+									<p class="tabs-info__right">60</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">-40ºC ... 80ºC</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс CAN</p>
+									<p class="tabs-info__right">2 канала</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс K-Line</p>
+									<p class="tabs-info__right">опционально</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс RS232</p>
+									<p class="tabs-info__right">протокол CANlog/ARNAVICAN</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс RS485</p>
+									<p class="tabs-info__right">протокол ARNAVICAN</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Интерфейс USB</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество дискретных входов</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество аналоговых входов</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество дискретных выходов</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-can/ARNAVI_CAN_.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+								<a href="https://docs.google.com/spreadsheets/d/1vkZuc5tkFOzLz65n0fcsKZFy8zkNlbo9sCM5zfpq6f8/edit#gid=1624217125"
+									class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Список поддерживаемой техники</p>
+								</a>
+								<a href="../download/arnavi-can/ARNAVI_CAN_EXT.exe" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Установщик</p>
+								</a>
+								<a href="../download/arnavi-can/driver-arnavi-can.zip" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/download-icon.svg" alt="">
+										<img src="../img/products/download-icon-white.svg" alt="">
+									</div>
+									<p>Драйвер</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+%button-cyan {
+	color: #fff;
+	background: #47A6BE;
+	border: 3px solid #47A6BE;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		border: 1.5px solid #47A6BE;
+	}
+}
+
+%button-white {
+	color: #575656;
+	background: #FBFBFB;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	transition-duration: 0.3s;
+	border: 3px solid #FBFBFB;
+	@media screen and (max-width: 639px) {
+		border: 1.5px solid #FBFBFB;
+	}
+}
+
+%button-stroke-white {
+	border: 3px solid #FBFBFB;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	border-radius: 50px;
+	@media screen and (max-width: 639px) {
+		border: 1.5px solid #FBFBFB;
+	}
+}
+
+%button-stroke-cyan {
+	border: 3px solid #47A6BE;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #47A6BE;
+	border-radius: 50px;
+	@media screen and (max-width: 639px) {
+		border: 1.5px solid #47A6BE;
+	}
+}
+
+%button-act {
+	background: #24839B;
+	color: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border: 3px solid #24839B;
+	@media screen and (max-width: 639px) {
+		border: 1.5px solid #24839B;
+	}
+}
+
+
+
+
+
+$text: #575656;
+$white:#FBFBFB;
+
+//background
+
+$bg: #006F9D;
+
+$bg-shape: #F0F6F9;
+
+$link:#47A6BE;
+
+$linkhover:#24839B;
+
+$linkvisited: #24839B;

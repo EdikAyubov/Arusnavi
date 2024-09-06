@@ -1,0 +1,169 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Беспроводное реле блокировки Arnavi PLC</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">Дополнительное оборудование</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-plc.html"><span>Arnavi PLC</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI PLC</h2>
+						<h3 class="main-equip__subtitle">Беспроводное реле блокировки</h3>
+						<p class="main-equip__text">Предназначен для оборудования любых охранных систем дополнительной цепью
+							блокировки двигателя управляемой по штатной проводке автомобиля.</p>
+						<a href="#request-plc" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/equip/arnavi-plc.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<ul class="tabs-info__list">
+								<li>Комплект из блокирующего беспроводного реле и модуля управления. Предназначен для
+									оборудования любых охранных систем дополнительной цепью блокировки двигателя управляемой по
+									штатной проводке автомобиля. Такое решение не имеет аналогов на рынке, так как не
+									используется ни Bluetooth-, ни радио-каналов для связи между "мастер-частью" и реле
+									блокировки, следовательно обнаружить при помощи сканеров это оборудование практически
+									невозможно;</li>
+								<li>Такое решение повышает противоугонные способности охранного комплекса. Блокирующее реле
+									имеет небольшие габариты и позволяет его маскировать в жгуте штатной проводки. Главное и
+									неоспоримое преимущество данного устройства - отсутствие необходимости прокладывания проводов
+									от трекера к реле, так как при обнаружении трекера по проводу можно найти реле, а с данным
+									устройством это невозможно. Кроме того, система устроена таким образом, что реле блокировки
+									постоянно проверяет наличие соединения с "управляющей частью", расположенной в трекере, и,
+									при отсутствии связи реле разрывает цепь автоматически. Например, злоумышленник обнаружил
+									установленный навигационный контроллер, оборвал провода и выбросил устройство, реле при
+									проверке не обнаруживает связи с "мастер-частью" и автоматически блокирует двигатель, не
+									давая злоумышленнику завести автомобиль;</li>
+								<li>Комплект предназначен для использования на всех типах автомобилей с питанием от бортовой
+									сети с заземленным отрицательным выходом аккумуляторной батареи с номинальным напряжением
+									+12В.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Габаритные размеры блокирующего реле, мм (без учета жгута)</p>
+									<p class="tabs-info__right">64x 23.5x 15</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Габаритные размеры модуля управления, мм</p>
+									<p class="tabs-info__right">32 x 27.5 x 4</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Масса блокирующего реле, грамм</p>
+									<p class="tabs-info__right">15</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Масса модуля управления, грамм</p>
+									<p class="tabs-info__right">2.5</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">7 - 15</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Ток, потребляемый модулем управления, мА</p>
+									<p class="tabs-info__right">≤ 5</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Максимальный коммутируемый ток блокирующим реле, А</p>
+									<p class="tabs-info__right">20</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Рабочая температура</p>
+									<p class="tabs-info__right">от -40ºC до + 85ºC</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Время срабатывания блокирующего реле по команде, с.</p>
+									<p class="tabs-info__right">≤ 3</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Время срабатыванияблокирующего реле при потере связи с модулем
+										управления, с.</p>
+									<p class="tabs-info__right">≤ 30</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-plc/Arnavi_PLC_manual_v_1.0.pdf" class="tabs-info__button"
+									target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

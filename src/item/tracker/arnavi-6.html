@@ -1,0 +1,350 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Навигационный контроллер Arnavi 6</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="../index.html">Главная</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="../products.html">Продукты</a></li>
+					<img src="../img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a onclick="javascript:history.back();return false;">GPS-трекеры</a></li>
+					<img src="../img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="arnavi-6.html"><span>Arnavi 6</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-equip" id="main">
+			<div class="container">
+				<div class="main-equip__row">
+					<div class="main-equip__info">
+						<h2 class="main-equip__title">ARNAVI 6</h2>
+						<h3 class="main-equip__subtitle">Навигационный котроллер</h3>
+						<p class="main-equip__text">Для дистанционного наблюдения за подвижными объектами, может быть
+							использован совместно с любым совместимым программным комплексом.</p>
+						<a href="#request-arnavi-6" class="main-equip__button popup-link button-white">Заказать</a>
+					</div>
+					<div class="main-equip__image">
+						<img src="../img/products/tracker/arnavi-6.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с ТАБАМИ -->
+		<div class="tabs-info">
+			<div class="container">
+				<div class="tabs-info__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs-info__tabs">
+
+						<a href="#characteristics" class="tabs-info__tab">Характеристики</a>
+						<a href="#resources" class="tabs-info__tab ">Ресурсы</a>
+					</nav>
+					<div class="tabs-info__body">
+						<!-- ТАБ Описания -->
+						<div class="tabs-info__block" id="description">
+							<p class="tabs-info__text"><span>Особенности Arnavi 6:</span></p>
+							<ul class="tabs-info__list">
+								<li>Модем GSM с поддержкой сетей 2G и 4G;</li>
+								<li>Вариативность по антеннам GSM и навигации: встроенная или внешняя;</li>
+								<li>Встроенный WIFI модуль – передача данных на сервер (основной или резервный канал).
+									Опциональное
+									оснащение в виде платы расширения Данный функционал можно прописывать в тендерах для
+									ограничения
+									других участников;</li>
+								<li>Поддержка Bluetooth 4.0 (BLE) – подключение беспроводных датчиков (ДУТ, термодатчики и
+									другие);
+								</li>
+								<li>Большой набор цифровых интерфейсов: CAN, RS485, RS232, 1-WIRE;</li>
+								<li>Подключение по CAN ко многим ТС напрямую (список машин постоянно обновляется);</li>
+								<li>Качественная защита по питанию до 500 В;</li>
+								<li>Специализированная мс для заряда и контроля АКБ. Можно настраивать режимы зарядки, контроль
+									заряда от температуры;</li>
+								<li>Сервисная кнопка на плате для функции скачать настройки, обновить ПО с WEB конфигуратора.
+									Это
+									удобно, когда нет под рукой ПК, то простым нажатием на кнопку прибор сам загружает
+									назначенную
+									версию ПО и настройки;</li>
+								<li>Настройка, диагностика через мобильное приложение (варианты подключения Bluetooth, USB);
+								</li>
+								<li>Подключение проводной двухсторонней громкой связи;</li>
+								<li>Большое кол-во дискретных входов и выходов под различные задачи Данный функционал можно
+									прописывать в тендерах для ограничения других участников;</li>
+								<li>Выходы питания для датчиков 5 В и 12 В Данный функционал можно прописывать в тендерах для
+									ограничения других участников.</li>
+							</ul>
+						</div>
+						<!-- ТАБ Характеристики -->
+						<div class="tabs-info__block" id="characteristics">
+							<p class="tabs-info__text"><b>Аппаратные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Модуль GSM</p>
+									<p class="tabs-info__right">2G | 4G</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна GSM</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество SIM карт (чипов)</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль навигации</p>
+									<p class="tabs-info__right">GPS | ГЛОНАСС</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна навигации</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль BlueTooth (BLE)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна BlueTooth</p>
+									<p class="tabs-info__right">Встроенная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Модуль WiFi</p>
+									<p class="tabs-info__right">Встроенный (опционально)/внешний</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Антенна WiFi</p>
+									<p class="tabs-info__right">Встроенная (опционально)/внешняя</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Напряжение питания, В</p>
+									<p class="tabs-info__right">8 - 50</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Среднее потребление
+										(режим сна - активный режим), мА</p>
+									<p class="tabs-info__right">2 - 80</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Резервный АКБ, мА</p>
+									<p class="tabs-info__right">300 - 2000</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Объем черного ящика, Мб / кол-во записей</p>
+									<p class="tabs-info__right">32 / 100 000</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по минусу)</p>
+									<p class="tabs-info__right">4</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные входы (по плюсу)</p>
+									<p class="tabs-info__right">2*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Аналоговые входы (АЦП)</p>
+									<p class="tabs-info__right">2*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по минусу)</p>
+									<p class="tabs-info__right">3</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Дискретные выходы (по плюсу)</p>
+									<p class="tabs-info__right">5В (50 мА) и 12В (300 мА)</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">UART</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS232</p>
+									<p class="tabs-info__right">Есть*</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">RS485</p>
+									<p class="tabs-info__right">Есть (вместо CAN)</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">CAN</p>
+									<p class="tabs-info__right">Есть (вместо RS485)</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">1-WIRE</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">USB</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Акселерометр (датчик движения)</p>
+									<p class="tabs-info__right">Есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Термодатчик встроенный</p>
+									<p class="tabs-info__right">Нет</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Голосовая связь</p>
+									<p class="tabs-info__right">Проводная</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Вес, грамм</p>
+									<p class="tabs-info__right">100</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Габариты, мм</p>
+									<p class="tabs-info__right">70 х 75 х 22</p>
+								</li>
+							</ul>
+							<p class="tabs-info__text"><b>Программные особенности</b></p>
+							<ul class="tabs-info__table">
+								<li>
+									<p class="tabs-info__left">Удаленная настройка, обновление ПО (WEB) </p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Программа ПК для настройки (USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Мобильное приложение (BlueTooth или USB)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые протоколы</p>
+									<p class="tabs-info__right">INTERNAL, EXTERNAL, USER_AG, EGTS</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество серверов мониторинга</p>
+									<p class="tabs-info__right">2</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество ДУТ по RS232</p>
+									<p class="tabs-info__right">1</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество ДУТ по RS485 </p>
+									<p class="tabs-info__right">8</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество датчиков по 1-WIRE</p>
+									<p class="tabs-info__right">10</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Количество датчиков по BlueTooth (BLE)</p>
+									<p class="tabs-info__right">10</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддерживаемые беспроводные датчики (BLE)</p>
+									<p class="tabs-info__right tabs-info__right_wrap">ARNAVI BLE-LLS, ARNAVI BTS v.3, ESCORT
+										TL-BLE, ESCORT TD-BLE, Teltonika Eye Sensor, Mielta Fantom BLE, ITALON BLE, Gicam BLE</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">EcoDriving (стиль вождения)</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Режим энергосбережения</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка протокола MODBUS</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Подключение тахографа Штрих</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Подключение DTA CAN</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Подключение CAN-LOG</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Поддержка фотокамер ZM, VC0607</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+								<li>
+									<p class="tabs-info__left">Отслеживание эвакуации авто</p>
+									<p class="tabs-info__right">есть</p>
+								</li>
+							</ul>
+						</div>
+						<!-- ТАБ Ресурсы -->
+						<div class="tabs-info__block" id="resources">
+							<div class="tabs-info__buttons">
+								<a href="../download/arnavi-6/Arnavi6.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Краткая информация</p>
+								</a>
+								<a href="../download/arnavi-5/GOST-arnavi-5.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Сертификат ГОСТ</p>
+								</a>
+								<a href="../download/arnavi-6/Arnavi-6-manual.pdf" class="tabs-info__button" target="_blank">
+									<div class="tabs-info__icon">
+										<img src="../img/products/pdf-icon.svg" alt="">
+										<img src="../img/products/pdf-icon-white.svg" alt="">
+									</div>
+									<p>Руководство пользователя</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="../js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="../js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="../js/form.js"></script>
+</body>
+
+</html>

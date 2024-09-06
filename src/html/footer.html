@@ -1,0 +1,215 @@
+<!-- Блок Контакты с картой -->
+<div class="contacts" id="contacts">
+	<div class="container">
+		<h2 class="contacts__title title">Контакты</h2>
+		<div class="contacts__row">
+			<div class="contacts__info">
+				<!-- <p class="contacts__text">Мы будем рады вас видеть в офисе нашей компании, однако если вам так удобнее вы
+					можете связаться с нами любым другим способом: </p> -->
+				<div class="footer__info">
+					<div class="footer__item">
+						<h3 class="footer__label">Техподдержка по оборудованию</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:support@arusnavi.ru" class="footer__link">support@arusnavi.ru</a>
+							</li>
+							<li>
+								<img src="@img/contacts/telegram.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="https://t.me/ArusnaviSupport_bot" class="footer__link">@ArusnaviSupport_bot</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Техподдержка ПО</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:support@geliossoft.ru" class="footer__link">support@geliossoft.ru</a>
+							</li>
+							<li>
+								<img src="@img/contacts/telegram.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="https://t.me/geliossoft_bot" class="footer__link">@geliossoft_bot</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Отдел логистики</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="@img/contacts/telephone.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="tel:79645007084" class="footer__link">+7 (964) 500-70-84
+								</a>
+							</li>
+							<li>
+								<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:logist@arusnavi.ru" class="footer__link">logist@arusnavi.ru</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__label">Менеджер по оптовой закупке</h3>
+						<ul class="footer__contacts">
+							<li>
+								<img src="@img/contacts/telephone.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="tel:79096215911" class="footer__link">+7 (909) 621-59-11</a>
+							</li>
+							<li>
+								<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:89096215911@arusnavi.ru" class="footer__link">89096215911@arusnavi.ru</a>
+							</li>
+							<li>
+								<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+								<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+								<a href="mailto:sales@arusnavi.ru" class="footer__link">sales@arusnavi.ru</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Карта -->
+			<div class="contacts__map">
+				<div class="contants__block">
+					<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e597429992c29338bca6f5de080054ecaaa96aa291bc4bd20152c06cc976cd0&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Блок Оставить заявку -->
+<div class="request">
+	<div class="container">
+		<h2 class="request__title title">Оставить заявку</h2>
+		<form action="#" class="request__form" id="request-form" method="post" enctype="multipart/form-data">
+			<!-- Обязательный блок для формы он скрыт и не виден но существует -->
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="ArusNavi">
+			<input type="hidden" name="admin_email" value="89096215911@arusnavi.ru">
+			<input type="hidden" name="form_subject" value="footer form">
+			<!-- END Hidden Required Fields -->
+			<div class="request__row">
+				<div class="request__left">
+					<input type="text" name="Name" placeholder="Ваше имя" class="request__input">
+					<input type="text" name="Email" placeholder="E-mail" class="request__input">
+					<input type="tel" name="Phone" placeholder="Номер телефона" class="request__input">
+				</div>
+				<textarea name="Question" placeholder="Задать свой вопрос..." class="request__textarea"></textarea>
+				<div class="request__checkbox">
+					<div class="checkbox">
+						<input id="requestAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="requestAgreement" class="checkbox__label req"><span class="form-text">Я даю свое согласие
+								на обработку персональных данных согласно c <a href="personal-data-processing-policy.html"
+									target="_blank">условиями</a>*</span></label>
+					</div>
+				</div>
+			</div>
+			<button class="request__button button-white">Отправить</button>
+		</form>
+	</div>
+</div>
+<!-- Футтер -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__logo">
+			<a href="index.html"><img src="@img/logo.svg" alt=""></a>
+		</div>
+		<!-- Контакты -->
+		<div class="footer__info">
+			<div class="footer__item">
+				<h3 class="footer__label">Техподдержка по оборудованию</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:support@arusnavi.ru" class="footer__link">support@arusnavi.ru</a>
+					</li>
+					<li>
+						<img src="@img/contacts/telegram.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="https://t.me/ArusnaviSupport_bot" class="footer__link">@ArusnaviSupport_bot</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Техподдержка ПО</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:support@geliossoft.ru" class="footer__link">support@geliossoft.ru</a>
+					</li>
+					<li>
+						<img src="@img/contacts/telegram.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/telegram-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="https://t.me/geliossoft_bot" class="footer__link">@geliossoft_bot</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Отдел логистики</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="@img/contacts/telephone.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="tel:79645007084" class="footer__link">+7 (964) 500-70-84
+						</a>
+					</li>
+					<li>
+						<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:logist@arusnavi.ru" class="footer__link">logist@arusnavi.ru</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item">
+				<h3 class="footer__label">Менеджер по оптовой закупке</h3>
+				<ul class="footer__contacts">
+					<li>
+						<img src="@img/contacts/telephone.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/telephone-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="tel:79096215911" class="footer__link">+7 (909) 621-59-11</a>
+					</li>
+					<li>
+						<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:89096215911@arusnavi.ru" class="footer__link">89096215911@arusnavi.ru</a>
+					</li>
+					<li>
+						<img src="@img/contacts/mail.svg" alt="" class="footer__icon">
+						<img src="@img/contacts/mail-act.svg" alt="" class="footer__icon footer__icon_act">
+						<a href="mailto:sales@arusnavi.ru" class="footer__link">sales@arusnavi.ru</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Соц сети -->
+		<div class="footer__row">
+			<div class="footer__facebook">
+				<img src="@img/social/facebook.svg" class="footer__notact" alt="">
+				<a href="https://www.facebook.com/arusnavi" target="_blank"><img src="@img/social/facebook-act.svg"
+						class="footer__act" alt=""></a>
+			</div>
+			<div class="footer__instagram">
+				<img src="@img/social/instagram.svg" class="footer__notact" alt="">
+				<a href="https://instagram.com/arusnavi.ru?igshid=YmMyMTA2M2Y=" target="_blank"><img
+						src="@img/social/instagram-act.svg" class="footer__act" alt=""></a>
+			</div>
+			<div class="footer__vk">
+				<img src="@img/social/vk.svg" class="footer__notact" alt="">
+				<a href="https://vk.com/arusnavi" target="_blank"><img src="@img/social/vk-act.svg" class="footer__act"
+						alt=""></a>
+			</div>
+		</div>
+		<div class="footer__line"></div>
+		<p class="footer__copyright">Copyright © 2022 ArusNavi. Все права защищены</p>
+	</div>
+</footer>

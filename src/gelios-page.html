@@ -1,0 +1,245 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>GPS мониторинг на базе iOS и Android</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="../@img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header-main.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="index.html">Главная</a></li>
+					<img src="@img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li><a href="gelios.html"><span>Gelios</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-gelios" id="main">
+			<div class="container">
+				<div class="main-gelios__row">
+					<div class="main-gelios__info">
+						<h2 class="main-gelios__title">GPS мониторинг на базе iOS и Android</h2>
+						<h3 class="main-gelios__subtitle">Мобильное приложение и web-версия</h3>
+						<div class="main-gelios__buttons">
+							<a href="#geliosmobile" onclick="slowScroll('#geliosmobile')"
+								class="main__button-second button-stroke-white">Подробнее</a>
+							<a href="https://geliospro.com/site/login/?login=demo&pass=920d4c12f8faa0aeb940b4ddb4987592&lang=ru"
+								class="main__button-boss button-white" target="_blank">Демо-вход</a>
+						</div>
+					</div>
+					<div class="main-gelios__image">
+						<img src="@img/gelios/gelios-page/image-gelios.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок ВЕБ версия -->
+		<div class="web-version">
+			<div class="container">
+				<div class="web-version__row">
+					<picture class="web-version__image">
+						<source srcset="@img/gelios/gelios-page/web-image.png" type="image/webp" media="(min-width: 992px)">
+						<source srcset="@img/gelios/gelios-page/web-image-reverse.png" type="image/webp"
+							media="(max-width: 992px)">
+						<img src="@img/gelios/gelios-page/web-image.png" alt="">
+					</picture>
+					<div class="web-version__info">
+						<h2 class="web-version__title title">WEB-версия</h2>
+						<p class="web-version__text">Удобная многофункциональная web-версия для спутникового GPS и ГЛОНАСС
+							мониторинга. Возможности удалённого контроля автотранспорта, спецтехники, любых подвижных и
+							неподвижных объектов.</p>
+						<a href="https://geliospro.com/site/login/?login=demo&pass=920d4c12f8faa0aeb940b4ddb4987592&lang=ru"
+							class="web-version__button button-cyan" target="_blank">Демо-вход</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок ГелиосМобайл -->
+		<div class="gelios-item" id="geliosmobile">
+			<div class="gelios-item__shape">
+				<div class="container">
+					<div class="gelios-item__grid">
+						<div class="gelios-item__info">
+							<h2 class="gelios-item__title title">GeliosMobile</h2>
+							<p class="gelios-item__text">GeliosMobile — это мобильное приложение для смартфонов и планшетов,
+								разработанное компанией ООО «ГелиосСофт» для пользователей системы Gelios, которое позволяет
+								оперативно отслеживать активность объектов мониторинга в режиме онлайн.</p>
+							<div class="gelios-item__buttons">
+								<a href="https://itunes.apple.com/ru/app/geliosmobile/id999837601?mt=8"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon">
+										<img src="@img/gelios/gelios-page/apple.svg" alt="">
+										<img src="@img/gelios/gelios-page/apple-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">App Store</p>
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=ru.soft.gelios.mobile&hl=ru"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon gelios-item__icon_google">
+										<img src="@img/gelios/gelios-page/google-play.svg" alt="">
+										<img src="@img/gelios/gelios-page/google-play-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">Google Play</p>
+								</a>
+							</div>
+						</div>
+						<div class="gelios-item__image">
+							<img src="@img/gelios/gelios-page/geliosmobile-image.png" alt="">
+						</div>
+						<div class="gelios-item__description">
+							<p class="gelios-item__label">Возможности:</p>
+							<ul class="gelios-item__table">
+								<li>Полный контроль местонахождения и состояния объекта мониторинга;</li>
+								<li>Генерация любых отчетов с возможностью отправки по электронной почте;</li>
+								<li>Построение треков;</li>
+								<li>Push уведомления;</li>
+								<li>Оценка качества вождения;</li>
+								<li>Отправка команд;</li>
+								<li>Создание геозон.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок ГелиосТрекер -->
+		<div class="gelios-item geliostracker">
+			<div class="gelios-item__shape">
+				<div class="container">
+					<div class="gelios-item__grid">
+						<div class="gelios-item__info">
+							<h2 class="gelios-item__title title">GeliosTracker</h2>
+							<p class="gelios-item__text">GeliosTracker — мобильное приложение для смартфонов и планшетов,
+								разработанное компанией ООО «ГелиосСофт» , для пользователей системы Gelios, которое позволяет
+								использовать Ваш смартфон в роли GPS трекера.</p>
+							<div class="gelios-item__buttons">
+								<a href="https://itunes.apple.com/ru/app/geliostracker/id1097478569?mt=8"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon">
+										<img src="@img/gelios/gelios-page/apple.svg" alt="">
+										<img src="@img/gelios/gelios-page/apple-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">App Store</p>
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=ru.soft.gelios.tracker&hl=ru"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon gelios-item__icon_google">
+										<img src="@img/gelios/gelios-page/google-play.svg" alt="">
+										<img src="@img/gelios/gelios-page/google-play-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">Google Play</p>
+								</a>
+							</div>
+						</div>
+						<div class="gelios-item__image">
+							<img src="@img/gelios/gelios-page/geliostracker-image.png" alt="">
+						</div>
+						<div class="gelios-item__description">
+							<p class="gelios-item__label">Возможности:</p>
+							<ul class="gelios-item__table">
+								<li class="gelios-item__item gelios-item__item_1">Определение координат последнего
+									местоположения;</li>
+								<li class="gelios-item__item gelios-item__item_2">Чёрный ящик сохраняет историю местонахождения
+									при слабом приёме сигнала. При появлении сигнала отправляет данные в систему мониторинга
+									Gelios;</li>
+								<li class="gelios-item__item gelios-item__item_3">Встроенный чат с оператором мониторинга,
+									отправка сообщений и изображений с места событий;</li>
+								<li class="gelios-item__item gelios-item__item_4">Статистика по отправленным сообщениям за
+									сутки.</li>
+								<li class="gelios-item__item gelios-item__item_4">Использует смартфон в роли GPS трекера</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок ТрекингМ -->
+		<div class="gelios-item">
+			<div class="gelios-item__shape">
+				<div class="container">
+					<div class="gelios-item__grid">
+						<div class="gelios-item__info">
+							<h2 class="gelios-item__title title">TrackingM</h2>
+							<p class="gelios-item__text">TrackingM — это универсальное приложение для смартфонов и планшетов,
+								разработанное компанией ООО «ГелиосСофт» для пользователей различных систем мониторинга, которое
+								позволяет оперативно отслеживать активность объектов мониторинга в режиме онлайн</p>
+							<div class="gelios-item__buttons">
+								<a href="https://itunes.apple.com/ru/app/trackingm/id809689725?mt=8"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon">
+										<img src="@img/gelios/gelios-page/apple.svg" alt="">
+										<img src="@img/gelios/gelios-page/apple-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">App Store</p>
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=com.geolon.tracking.m&hl=ru"
+									class="gelios-item__button button-white" target="_blank">
+									<div class="gelios-item__icon gelios-item__icon_google">
+										<img src="@img/gelios/gelios-page/google-play.svg" alt="">
+										<img src="@img/gelios/gelios-page/google-play-act.svg" alt="">
+									</div>
+									<p class="gelios-item__name">Google Play</p>
+								</a>
+							</div>
+						</div>
+						<div class="gelios-item__image">
+							<img src="@img/gelios/gelios-page/trackingm-image.png" alt="">
+						</div>
+						<div class="gelios-item__description">
+							<p class="gelios-item__label">Возможности:</p>
+							<ul class="gelios-item__table">
+								<li class="gelios-item__item gelios-item__item_1">Полный контроль местонахождения и состояния
+									объекта мониторинга;</li>
+								<li class="gelios-item__item gelios-item__item_2">Генерация любых отчетов с возможностью
+									отправки по электронной почте;</li>
+								<li class="gelios-item__item gelios-item__item_3">Построение треков;</li>
+								<li class="gelios-item__item gelios-item__item_4">Push уведомления;</li>
+								<li class="gelios-item__item gelios-item__item_4">Оценка качества вождения;</li>
+								<li class="gelios-item__item gelios-item__item_4">Отправка команд;</li>
+								<li class="gelios-item__item gelios-item__item_4">Создание геозон;</li>
+								<!--								<li class="gelios-item__item gelios-item__item_4">Использует смартфон в роли GPS трекера.</li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" onclick="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="js/script.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="js/form.js"></script>
+</body>
+
+</html>

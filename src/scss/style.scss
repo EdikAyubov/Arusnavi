@@ -1,0 +1,4175 @@
+// Добавляем обнуляющий стиль
+@import "nullstyle.scss";
+
+// Добавляем шрифтовые пары
+@import "font.scss";
+
+// Добавляем шаблоны цветов
+@import "colors.scss";
+
+// Обрати внимание в данном сайте адаптивы начинаются не с 767px а с 639px
+// это позволяет делать что бы на мобилке горизонтальный экран выглядил адекватно
+
+//Стиль текста для всего сайта
+body {
+	font-family: "SFProDisplay";
+	font-weight: 400;
+	line-height: 24px;
+	font-size: 20px;
+	letter-spacing: 0.02em;
+	color: $text;
+	overflow-x: hidden !important;
+	@media screen and (max-width: 639px) {
+		font-size: 12px;
+		line-height: 14px;
+	}
+	&.lock {
+		// Этот класс добавляется body при срабатывание эвентов в JS у поп апов и бургера. Блокирует прокрутку
+		overflow: hidden;
+		@media screen and (max-width: 639px) {
+			overflow: hidden;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.hide-product {
+	display: none;
+}
+
+// Заголовок
+.title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 57px;
+	letter-spacing: 0.08em;
+	@media screen and (max-width: 639px) {
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+
+// Контейнер
+.container {
+	max-width: 1200px;
+	padding: 0px 15px;
+	margin: 0px auto;
+	@media screen and (max-width: 992px) {
+		max-width: none;
+		padding: 0 20px;
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 0 10px;
+	}
+}
+
+// Кнопка с белой обводкой
+.button-stroke-white {
+	@extend %button-stroke-white;
+	display: block;
+	width: 236px;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		width: 127px;
+		padding: 10px;
+		font-size: 11px;
+		line-height: 13px;
+	}
+	&:hover {
+		@extend %button-act;
+		transition-duration: 0.3s;
+	}
+}
+
+// Кнопка с синей обводкой
+.button-stroke-cyan {
+	@extend %button-stroke-cyan;
+	display: block;
+	width: 236px;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		width: 127px;
+		padding: 10px;
+		font-size: 11px;
+		line-height: 13px;
+	}
+	&:hover {
+		@extend %button-act;
+		transition-duration: 0.3s;
+	}
+}
+
+// Белая кнопка
+.button-white {
+	@extend %button-white;
+	display: block;
+	width: 236px;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		width: 127px;
+		padding: 10px;
+		font-size: 11px;
+		line-height: 13px;
+	}
+	&:hover {
+		@extend %button-act;
+		transition-duration: 0.3s;
+	}
+}
+
+// Синяя кнопка
+.button-cyan {
+	@extend %button-cyan;
+	display: block;
+	width: 236px;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		width: 127px;
+		padding: 10px;
+		font-size: 11px;
+		line-height: 13px;
+	}
+	&:hover {
+		@extend %button-act;
+		transition-duration: 0.3s;
+	}
+}
+
+// ШАПКА!!!
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 20px 0px;
+	z-index: 50;
+	&:before {
+		// Добавляет бекграунд для шапки что позволяет ей всегда оставаться на целеном фоне
+		content: "";
+		position: absolute;
+		background: $bg;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__logo {
+		max-width: 200px;
+		display: block;
+		z-index: 1;
+		@media screen and (max-width: 639px) {
+			max-width: 150px;
+		}
+		img {
+			max-width: 100%;
+		}
+		&.hidden {
+			// Класс скрывающий белый логотип
+			display: none;
+		}
+	}
+
+	&__logo-color {
+		// Этот логотип появляется только при открытии меню в мобильной и планшетной версии
+		display: none;
+		max-width: 200px;
+		z-index: 2;
+		@media screen and (max-width: 639px) {
+			max-width: 150px;
+		}
+		img {
+			max-width: 100%;
+		}
+		&.hidden {
+			// Класс показывающий логотип с фирменными цветами
+			display: none;
+			@media screen and (max-width: 992px) {
+				display: block;
+				transition-delay: 0.2s;
+			}
+		}
+	}
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		z-index: 4;
+		align-items: center;
+		transform: translate(0, 10px);
+		li {
+			margin-right: 40px;
+			&:last-child {
+				margin-right: 0;
+			}
+			@media screen and (max-width: 992px) {
+				margin-right: 0;
+			}
+			@media screen and (max-width: 639px) {
+				margin-bottom: 20px;
+			}
+		}
+		li:hover {
+			// Позволяет делать анимацию в шапке при появлении линии под пунктом
+			& a {
+				color: #fff;
+				transition-duration: 0.3s;
+				@media screen and (max-width: 992px) {
+					color: $linkhover;
+				}
+				img {
+					opacity: 1;
+					transition-duration: 0.3s;
+				}
+				&.button-white {
+					background: $linkhover;
+					border-color: $linkhover;
+				}
+				p {
+					@media screen and (max-width: 992px) {
+						color: #fff;
+						transition-duration: 0.3s;
+					}
+				}
+			}
+			& .header__line {
+				margin-top: 2px;
+				width: 24px;
+				height: 2px;
+				background: #fff;
+				transition-duration: 0.3s;
+				@media screen and (max-width: 992px) {
+					background: $linkhover;
+					margin: 2px auto 0;
+					width: 50px;
+					height: 5px;
+				}
+				@media screen and (max-width: 639px) {
+					height: 2px;
+				}
+			}
+		}
+		@media screen and (max-width: 992px) {
+			// при адаптиве превращаем меню в шар и прячем за иконкой бургера
+			z-index: 1;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			overflow: hidden;
+			position: fixed;
+			top: 25px;
+			border-radius: 50%;
+			right: 15px; // Убирает меню за экран
+			width: 70px;
+			height: 70px;
+			background: $white;
+			transition-duration: 0.3s;
+			transform: translate(0);
+		}
+		@media screen and (max-width: 639px) {
+			width: 40px;
+			height: 40px;
+			top: 27px;
+			right: 10px;
+		}
+	}
+	&__menu.active {
+		// Данный класс добавляет JS он возвращает меню при клике на бургер
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		transition-duration: 0.5s;
+		padding: 200px 0;
+		li .header__link {
+			transition-delay: 0.2s;
+			opacity: 1;
+		}
+	}
+	&__link {
+		color: #7db6cd;
+		transition-duration: 0.3s;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: 700;
+		&.button-white {
+			padding: 10px 15px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			color: $text;
+			@media screen and (max-width: 992px) {
+				background: $link;
+				border-color: $link;
+				transform: translate(0, 120px);
+			}
+			@media screen and (max-width: 375px) {
+				transform: translate(0, 50px) scale(0.8);
+			}
+		}
+		p {
+			@media screen and (max-width: 992px) {
+				font-size: 30px;
+				color: #fff;
+			}
+			@media screen and (max-width: 639px) {
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+		@media screen and (max-width: 992px) {
+			color: $link;
+			display: block;
+			margin: 0px;
+			width: 100%;
+			font-size: 40px;
+			line-height: 48px;
+			opacity: 0;
+		}
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__line {
+		// Линия подчеркивающая пункт меню
+		transition-duration: 0.3s;
+		margin-top: 2px;
+		height: 2px;
+		width: 0;
+		@media screen and (max-width: 992px) {
+			margin: 2px auto 0;
+		}
+		@media screen and (max-width: 639px) {
+			height: 1px;
+		}
+	}
+
+	&__icon {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		margin-right: 10px;
+		transition-duration: 0.3s;
+		@media screen and (max-width: 992px) {
+			height: 30px;
+			width: 30px;
+		}
+		img {
+			position: absolute;
+			max-width: 100%;
+			top: 0;
+			left: 0;
+			&:last-child {
+				opacity: 0;
+				@media screen and (max-width: 992px) {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__bg-burger {
+		// Белый круг за бургером
+		display: none;
+		@media screen and (max-width: 992px) {
+			display: block;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: $white;
+			z-index: 2;
+		}
+		@media screen and (max-width: 639px) {
+			width: 40px;
+			height: 40px;
+			transform: translate(0, -10px);
+		}
+	}
+
+	&__burger {
+		// Бургер само собой
+		display: none;
+		z-index: 3;
+		@media screen and (max-width: 639px) {
+			left: 1px;
+		}
+		&:before,
+		&:after {
+			//Создают внешний вид бургера, а в частности его палочки
+			content: "";
+			position: absolute;
+			background: $bg;
+			width: 100%;
+			height: 5px;
+			left: 20%;
+			@media screen and (max-width: 992px) {
+				height: 3px;
+				width: 100%;
+			}
+			@media screen and (max-width: 639px) {
+				height: 2px;
+				width: 60%;
+			}
+		}
+		&:before {
+			top: 80%;
+			transition-duration: 0.3s;
+			@media screen and (max-width: 639px) {
+				top: 70%;
+			}
+		}
+		&:after {
+			bottom: -50%;
+			transition-duration: 0.3s;
+			@media screen and (max-width: 639px) {
+				bottom: -40%;
+			}
+		}
+		& span {
+			// Средняя палочка в бургере
+			background: $bg;
+			width: 100%;
+			height: 3px;
+			left: 20%;
+			display: block;
+			position: absolute;
+			top: 110%;
+			@media screen and (max-width: 639px) {
+				height: 2px;
+				width: 60%;
+				top: 100%;
+			}
+		}
+		&.active {
+			&:before {
+				top: 100%;
+				transition-duration: 0.3s;
+				transform: rotate(45deg);
+				width: 80%;
+				left: 40%;
+				@media screen and (max-width: 639px) {
+					left: 20%;
+				}
+			}
+			&::after {
+				top: 100%;
+				transition-duration: 0.3s;
+				transform: rotate(-45deg);
+				width: 80%;
+				left: 40%;
+				@media screen and (max-width: 639px) {
+					left: 20%;
+				}
+			}
+			span {
+				width: 0;
+			}
+		}
+		@media screen and (max-width: 992px) {
+			position: relative;
+			display: block;
+			width: 50px;
+			height: 30px;
+		}
+		@media screen and (max-width: 639px) {
+			position: relative;
+			display: block;
+			width: 38px;
+			height: 20px;
+		}
+	}
+}
+
+// Хлебные крошки
+.breadcrumb {
+	position: relative;
+	transform: translate(0, 130px);
+	z-index: 10;
+	@media screen and (max-width: 639px) {
+		transform: translate(0, 95px);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 639px) {
+			overflow-x: auto;
+		}
+		li {
+		}
+		a {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19px;
+			color: #7db6cd;
+			transition-duration: 0.3s;
+			cursor: pointer;
+			&:hover {
+				transition-duration: 0.3s;
+				color: #fff;
+			}
+		}
+		span {
+			color: #fff;
+		}
+	}
+
+	&__tab {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+
+	&__image {
+		margin: 0 14px;
+	}
+}
+
+// ГЛАВНЫЙ БЛОК!!!
+.main {
+	height: 900px;
+	background: url("../img/background.png") 0 0/ 100% 100% no-repeat;
+	@media screen and (max-width: 992px) {
+		// На адаптиве меняю расположение бекграунда что бы пропало видимое скругление
+		background: url("../img/background.png") center -30px / auto 100% no-repeat;
+	}
+	@media screen and (max-width: 639px) {
+		background: url("../img/background.png") center -70px / auto 100% no-repeat;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding: 240px 0 150px;
+		align-items: center;
+		@media screen and (max-width: 639px) {
+			padding: 100px 0 160px;
+		}
+	}
+
+	&__info {
+		margin-right: 90px;
+		max-width: 529px;
+		transform: translate(-100px, 0);
+		opacity: 0;
+		transition-duration: 0.8s;
+		transition-delay: 0.2s;
+
+		@media screen and (max-width: 639px) {
+			margin-right: 0;
+		}
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+	}
+
+	&__text {
+		color: #fff;
+		font-size: 40px;
+		line-height: 48px;
+		margin-bottom: 8px;
+		@media screen and (max-width: 639px) {
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+
+	&__label {
+		color: #fff;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 57px;
+		letter-spacing: 0.1em;
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 29px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__information {
+		color: #fff;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+			max-width: 300px;
+		}
+	}
+
+	&__buttons {
+		@media screen and (max-width: 639px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__button-second {
+		display: inline-block;
+		margin-right: 30px;
+		background: url("../img/arrow-down.svg") 170px center no-repeat;
+		padding-left: 45px;
+		text-align: left;
+		@media screen and (max-width: 639px) {
+			background: url("../img/arrow-down.svg") 96px center / 13px 14px no-repeat;
+			margin-right: 15px;
+			padding-left: 23px;
+		}
+		&:hover {
+			background:
+				url("../img/arrow-down.svg") 170px center no-repeat,
+				#24839b;
+			@media screen and (max-width: 639px) {
+				background:
+					url("../img/arrow-down.svg") 96px center/ 13px 14px no-repeat,
+					#24839b;
+			}
+		}
+	}
+
+	&__button-boss {
+		display: inline-block;
+	}
+
+	&__image {
+		// Картинка пропадает на адаптивах
+		max-width: 581px;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+// БЛОК НАШИ ПРЕИМУЩЕСТВА!!!
+.advantage {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #fff;
+	@media screen and (max-width: 992px) {
+		// Убаираю падинг что бы расположение блока было адекватно
+		padding-top: 0px;
+	}
+	@media screen and (max-width: 639px) {
+		// Добавляю margin что бы расположение блока было адекватно
+		margin-top: -100px;
+		padding-bottom: 30px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 55px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 50px;
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		max-width: 500px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 40px;
+		}
+		@media screen and (max-width: 639px) {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__items {
+		width: 600px;
+		max-width: 600px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		@media screen and (max-width: 639px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+// Флекс элементы блока преимущества
+.item {
+	display: flex;
+	flex-direction: column;
+	max-width: 260px;
+	width: 260px;
+	align-items: center;
+	justify-content: space-between;
+
+	transform: translate(0, 100px);
+	opacity: 0;
+	transition-duration: 0.8s;
+	&:nth-child(1) {
+		transition-delay: 0s;
+		margin-bottom: 20px;
+	}
+	&:nth-child(2) {
+		transition-delay: 0.3s;
+	}
+	&:nth-child(3) {
+		transition-delay: 0.5s;
+	}
+	&:nth-child(4) {
+		transition-delay: 0.7s;
+	}
+	&.anim {
+		transform: translate(0);
+		opacity: 1;
+	}
+	@media screen and (max-width: 639px) {
+		margin-bottom: 20px;
+	}
+	&__icon {
+		max-width: 60px;
+		margin-bottom: 20px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 5px;
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+}
+
+// БЛОК О КОМПАНИИ!!!
+.about {
+	background: #fff;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	overflow: hidden;
+	@media screen and (max-width: 992px) {
+		padding: 60px 20px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 30px 10px;
+	}
+
+	&__shape {
+		// Блок на котором находиться информация
+		background: $bg-shape;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 50px 0 50px 35px;
+		box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+		border-radius: 25px;
+		@media screen and (max-width: 992px) {
+			padding: 50px 30px;
+		}
+		@media screen and (max-width: 639px) {
+			border-radius: 10px;
+			padding: 20px 10px;
+		}
+	}
+
+	&__row {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 992px) {
+			justify-content: center;
+		}
+	}
+
+	&__info {
+		margin-right: 40px;
+		@media screen and (max-width: 992px) {
+			margin-right: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		transform: translate(-100px, 0px);
+		opacity: 0;
+		transition: 0.8s;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+		@media screen and (max-width: 992px) {
+			text-align: center;
+			transform: translate(0, 100px);
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		width: 646px;
+		margin-bottom: 24px;
+		transform: translate(-100px, 0);
+		opacity: 0;
+		transition: 0.8s;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			max-width: 100%;
+			transform: translate(0, 100px);
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 14px;
+		}
+		&:nth-child(5) {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__button {
+		margin: 30px auto 0;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__image {
+		max-width: 730px;
+		height: 100%;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+		img {
+			max-width: 730px;
+		}
+	}
+}
+
+// БЛОК ВИДЫ ДЕЯТЕЛЬНОСТИ!!!
+.activity {
+	background: #fff;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@media screen and (max-width: 639px) {
+		padding: 30px 0 30px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 80px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@media screen and (max-width: 992px) {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 350px;
+		align-items: center;
+		transform: translate(0, 100px);
+		opacity: 0;
+		transition-duration: 0.8s;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+		&:nth-child(1) {
+			transition-delay: 0s;
+		}
+		&:nth-child(2) {
+			transition-delay: 0.3s;
+		}
+		&:nth-child(3) {
+			transition-delay: 0.5s;
+		}
+		@media screen and (max-width: 992px) {
+			margin-bottom: 40px;
+			max-width: 320px;
+		}
+		@media screen and (max-width: 639px) {
+			margin: 0 auto 30px;
+		}
+		&:nth-child(1) {
+			// Для элементов добавляется флекс что бы они могли адекватно позиционировать на адаптиве планшета
+			@media screen and (max-width: 992px) {
+				flex: 1 1 320px;
+			}
+		}
+		&:nth-child(2) {
+			max-width: 350px;
+			@media screen and (max-width: 992px) {
+				flex: 1 1 320px;
+			}
+		}
+		&:nth-child(3) {
+			@media screen and (max-width: 992px) {
+				margin: 0 auto;
+				flex: 1 1 320px;
+			}
+		}
+	}
+
+	&__box-icon {
+		background: #fff;
+		box-shadow: 0px 2px 11px -2px rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		padding: 26px;
+		margin-bottom: 55px;
+		@media screen and (max-width: 639px) {
+			max-width: 100px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__icon {
+		max-width: 90px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+}
+
+// ГЕЛИОС
+.gelios {
+	padding: 60px 0 60px;
+	transition-duration: 0.8s;
+	opacity: 0;
+	transform: translate(0, 100px); // Для анимации блок спрятан и потом появляется снизу
+	@media screen and (max-width: 992px) {
+		padding: 60px 10px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 30px 10px;
+	}
+	&.anim {
+		transform: translate(0);
+		opacity: 1;
+	}
+
+	&__shape {
+		background: $bg-shape;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 50px 0 20px;
+		box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+		border-radius: 25px;
+		@media screen and (max-width: 639px) {
+			border-radius: 10px;
+			padding: 20px 0;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 10px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+
+	&__description {
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		max-width: 646px;
+		margin: 0 auto 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+			max-width: 280px;
+			margin: 0 auto 20px;
+		}
+	}
+
+	&__grid {
+		// Расположение элементов сделано с помощью Grid Layout
+		display: grid;
+		grid-template-columns: 670px 470px;
+		grid-template-rows: 400px 1fr;
+		gap: 30px;
+		margin: 0 auto;
+		transform: translate(-1%, 0);
+		@media screen and (max-width: 992px) {
+			transform: translate(0);
+			max-width: 100%;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: 376px 1fr 70px;
+		}
+		@media screen and (max-width: 639px) {
+			grid-template-rows: 0px 1fr 40px;
+			gap: 0;
+		}
+	}
+
+	&__image-box {
+		position: relative;
+		margin-top: 20px;
+		@media screen and (max-width: 992px) {
+			margin: 0 auto;
+		}
+		@media screen and (max-width: 639px) {
+			// Скрывает картинки вне пунктов спойлеров на мобильной версии
+			display: none;
+		}
+	}
+
+	&__image {
+		// Картинки появляются при выборе нужного пункта, до этого они скрытые
+		max-width: 670px;
+		position: absolute;
+		z-index: 0;
+		opacity: 0;
+		border-radius: 15px;
+		box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+		transition-duration: 0.7s;
+		@media screen and (max-width: 992px) {
+			top: 0;
+			left: -35%;
+		}
+
+		&.active {
+			z-index: 2;
+			transition-delay: 0.3s;
+			opacity: 1;
+		}
+	}
+
+	&__image-boss {
+		// Главная картинка которая видна всегда
+		max-width: 450px;
+		margin: 0 auto;
+		transform: translate(20%, 0%);
+		opacity: 1;
+		z-index: 1;
+		@media screen and (max-width: 992px) {
+			max-width: 400px;
+			transform: translate(0);
+		}
+	}
+
+	&__spoiler {
+		// Тело спойлеров
+		position: relative;
+		grid-row: 1 / span 2;
+		grid-column: 2 / end;
+		@media screen and (max-width: 992px) {
+			grid-column: 1;
+			grid-row: 2/3;
+		}
+	}
+
+	&__item {
+		// Элементы спойлеров тут задан внешний вид
+		background: $white;
+		padding: 10px 20px;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition-duration: 0.3s;
+		position: relative;
+		z-index: 0;
+		transition-duration: 0.3s;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__label {
+		// Заголовок яляется одновременно кнопкой при клике по ниму открывается спойлер, с помощью псевдоклассов бефор и афтор сделаны стрелочки вниз
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		position: relative;
+		cursor: pointer;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+		}
+		&::before,
+		&::after {
+			// Делает внешний вид стрелочек спойлера
+			content: " ";
+			width: 12px;
+			height: 2px;
+			background-color: $text;
+			position: absolute;
+			top: 7px;
+			transition-duration: 0.3s;
+		}
+		&::before {
+			transform: rotate(40deg);
+			right: 9px;
+		}
+		&::after {
+			transform: rotate(-40deg);
+			right: 0px;
+		}
+		&.active {
+			// Переворачивает стрелочки при активном классе
+			&::before {
+				transform: rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+	}
+
+	&__text {
+		// Текст скрыт при неактивном спойлере
+		display: none;
+		font-size: 16px;
+		line-height: 19px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			line-height: 14px;
+			padding-left: 5px;
+			margin-top: 10px;
+		}
+	}
+
+	&__image-spoiler {
+		// Данные картинки скрыты на десктоп и планшет версии и появляются только на мобилке
+		display: none;
+		@media screen and (max-width: 639px) {
+			display: block;
+			max-width: 0%;
+			transition-duration: 0.2s;
+			&.active {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		grid-row: 2;
+		align-self: start;
+		z-index: 3;
+		@media screen and (max-width: 992px) {
+			grid-row: 3 / end;
+		}
+	}
+}
+
+// БЛОК СО СЛАЙДЕРОМ ПРОДУКЦИЯ ARUSNAVI!!!
+.products {
+	background: $bg;
+	padding: 60px 0;
+	@media screen and (max-width: 639px) {
+		padding: 30px 0;
+	}
+
+	&__title {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	@media screen and (max-width: 639px) {
+		margin-bottom: 20px;
+	}
+
+	&__megaslider {
+		// Главный слайдер
+		position: relative;
+		padding-top: 140px;
+		@media screen and (max-width: 992px) {
+			padding-top: 100px;
+		}
+		@media screen and (max-width: 639px) {
+			padding-top: 0px;
+		}
+	}
+
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+		@media screen and (max-width: 992px) {
+			margin-top: 20px;
+		}
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Кнопки слайдера реалиованы с помощью js и надписи так же.
+		// Булеты слайдера
+		// Позиционирование булетов в ручную, возможно не совсем по центру
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: -20px;
+		left: 10%;
+		flex-wrap: wrap;
+		width: 900px;
+
+		@media screen and (max-width: 992px) {
+			// Сделан скейл что бы кнопки поместились на экране адаптива
+			width: 900px;
+			height: 70px;
+			transform: scale(0.7);
+			flex-wrap: wrap;
+			left: -12%;
+		}
+		@media screen and (max-width: 639px) {
+			// Здесь я отменяю перенос объектов на другую строку что
+			// бы реализовать скролл вправо. Выравнию первый объект с помощью большого падинга. Огромная
+			// ширина позволяет так же сделать элементы в строку не сжимаясь
+			align-items: flex-start;
+			overflow-x: scroll;
+			flex-wrap: nowrap;
+			padding-left: 160%;
+			width: 160%;
+			left: -20%;
+			margin-top: -40px;
+		}
+		@media screen and (max-width: 370px) {
+			// с помощью этих ширин и отступов выравнию
+			width: 200%;
+		}
+		@media screen and (max-width: 330px) {
+			width: 300%;
+			left: -70%;
+		}
+		@media screen and (max-width: 400px) {
+			padding-left: 180%;
+		}
+		& li {
+			// Здесь манипуляции с расположением кнопок элементов
+			list-style: none;
+			margin: 30px 10px;
+			transform: translate(0, -7.5px);
+
+			@media screen and (max-width: 992px) {
+				margin: 30px 10px;
+			}
+			@media screen and (max-width: 639px) {
+				margin: 0 auto 50px;
+				display: inline-block;
+				margin: 10px 10px;
+				flex: 0 0 auto;
+
+				transform: translate(0, 20px);
+			}
+			& a {
+				// Делаю внешний вид самой кнопки
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				color: $text;
+				cursor: pointer;
+				background: #fbfbfb;
+				padding: 13px 30px;
+				border-radius: 50px;
+				margin: 0 10px;
+				transition-duration: 0.3s;
+				@media screen and (max-width: 639px) {
+					padding: 13px 20px;
+					margin: 0;
+				}
+				&:hover {
+					color: #fff;
+					background: $link;
+					transition-duration: 0.3s;
+				}
+			}
+			&.slick-active a {
+				color: #fff;
+				background: $link;
+				transition-duration: 0.3s;
+			}
+			&.slick-active button {
+				background: $link;
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0px;
+			border-radius: 10px;
+		}
+	}
+}
+
+// Отвечает за слайдер внутри основного слайдера
+
+// Сладер для трекеров
+.tracker {
+	position: relative;
+	z-index: 12;
+	@media screen and (max-width: 992px) {
+		transform: scale(1.2);
+		z-index: 2;
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		transform: scale(1);
+	}
+
+	&__item {
+		background: $bg-shape;
+		border-radius: 25px;
+		display: flex;
+		max-width: 570px;
+		justify-content: space-between;
+		margin: 20px auto;
+		@media screen and (max-width: 639px) {
+			flex-direction: column;
+			max-width: 100%;
+			border-radius: 10px;
+			align-items: center;
+			margin: 0 5px; // Делает минимальные отступы для пролистывания на мобильном адаптиве
+		}
+	}
+
+	&__image-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		max-width: 100%;
+		@media screen and (max-width: 639px) {
+			border-radius: 10px;
+			max-height: 280px;
+		}
+	}
+
+	&__image {
+		width: 236px;
+		padding: 0 20px;
+		@media screen and (max-width: 639px) {
+			width: 100%;
+			padding: 0 40px;
+		}
+		img {
+			max-width: 190px;
+			max-height: 130px;
+		}
+	}
+
+	&__info {
+		max-width: 290px;
+		padding: 20px 20px 20px 0;
+		margin-left: 20px;
+		@media screen and (max-width: 639px) {
+			padding: 15px 15px 20px;
+			max-width: 100%;
+		}
+	}
+
+	&__label {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		@media screen and (max-width: 639px) {
+			text-align: center;
+		}
+		& .name_nowrap {
+			white-space: nowrap;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		height: 100px;
+		@media screen and (max-width: 639px) {
+			height: 80px;
+		}
+	}
+
+	&__buttons {
+		margin-top: 45px;
+		@media screen and (max-width: 639px) {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+	}
+
+	&__button {
+		@extend %button-white;
+		padding: 10px 0;
+		font-size: 14px;
+		line-height: 17px;
+		width: 130px;
+		display: inline-block;
+		margin-right: 20px;
+		@media screen and (max-width: 639px) {
+			margin-right: 0;
+			margin-top: 10px;
+		}
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		text-decoration-line: underline;
+		color: $link;
+		display: inline-block;
+	}
+
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 30px auto;
+		max-width: 410px;
+		max-height: 15px;
+		flex-wrap: nowrap;
+		top: -5px;
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			transform: translate(0, -5px);
+		}
+		@media screen and (max-width: 639px) {
+			transform: scale(0.7);
+			align-items: center;
+			overflow-x: hidden;
+			padding-left: 0;
+		}
+
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -7.5px);
+			@media screen and (max-width: 639px) {
+				transform: translate(0, -1px);
+				width: 10px;
+				margin: 0 auto 50px;
+				display: inline-block;
+				transform: translate(-13px, 0);
+			}
+			&.slick-active button {
+				height: 9px;
+				width: 15px;
+				background: $link;
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 18px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 639px) {
+				transform: translate(6px, 21px);
+				width: 10px;
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			top: 50%;
+			z-index: 3;
+		}
+		@media screen and (max-width: 639px) {
+			margin: -70px 0 0;
+			top: 50%;
+		}
+		&.slick-prev {
+			left: 20%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				left: -100%;
+			}
+
+			@media screen and (max-width: 639px) {
+				max-height: 40px;
+				max-width: 40px;
+				border-radius: 50%;
+				left: 0;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+		&.slick-next {
+			right: 20%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				right: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				right: 0;
+			}
+		}
+	}
+}
+
+// Слайдер для контроля топлива
+.fuel {
+	position: relative;
+	z-index: 12;
+	@media screen and (max-width: 992px) {
+		transform: scale(1.2);
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		margin: 0 auto;
+		transform: scale(1);
+	}
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 30px auto;
+		max-width: 410px;
+		max-height: 15px;
+		flex-wrap: nowrap;
+		top: -5px;
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			transform: translate(0, -5px);
+		}
+		@media screen and (max-width: 639px) {
+			transform: scale(0.7);
+			align-items: center;
+			overflow-x: hidden;
+			padding-left: 0;
+		}
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -7.5px);
+			&.slick-active button {
+				height: 9px;
+				width: 80px;
+				background: $link;
+				@media screen and (max-width: 639px) {
+					width: 80px;
+					transform: translate(0, 3px);
+					display: inline-block;
+				}
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 85px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 639px) {
+				width: 80px;
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			margin: -70px 0px 0px;
+		}
+		@media screen and (max-width: 639px) {
+			top: 50%;
+		}
+		&.slick-prev {
+			left: 20%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				left: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				max-width: 40px;
+				left: 0%;
+			}
+		}
+		&.slick-next {
+			right: 20%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				right: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				right: 0;
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+// Слайдер для датчиков температуры
+.temperature {
+	position: relative;
+	z-index: 12;
+	@media screen and (max-width: 992px) {
+		transform: scale(1.2);
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		margin: 0 auto;
+		transform: scale(1);
+	}
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 30px auto;
+		max-width: 410px;
+		max-height: 15px;
+		flex-wrap: nowrap;
+		top: -5px;
+
+		@media screen and (max-width: 992px) {
+			display: block;
+			position: relative;
+			width: 100%;
+			transform: translate(0, -5px);
+		}
+		@media screen and (max-width: 639px) {
+			transform: scale(0.7);
+			align-items: center;
+			overflow-x: hidden;
+			padding-left: 0;
+		}
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -12px);
+			@media screen and (max-width: 992px) {
+				display: inline-block;
+				transform: translate(0, -17px);
+			}
+			&.slick-active button {
+				height: 9px;
+				width: 80px;
+				background: $link;
+				@media screen and (max-width: 992px) {
+					width: 180px;
+				}
+				@media screen and (max-width: 639px) {
+					width: 170px;
+					transform: translate(0, 8px);
+					display: inline-block;
+				}
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 40px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 992px) {
+				width: 190px;
+			}
+			@media screen and (max-width: 639px) {
+				width: 180px;
+				transform: translate(0, 8px);
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			margin: -70px 0px 0px;
+		}
+		@media screen and (max-width: 639px) {
+			top: 50%;
+		}
+		&.slick-prev {
+			left: 20%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				left: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				max-width: 40px;
+				left: 0%;
+			}
+		}
+		&.slick-next {
+			right: 20%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				right: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				right: 0;
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+// Слайдер для маяков
+.gps {
+	position: relative;
+	z-index: 12;
+	@media screen and (max-width: 992px) {
+		transform: scale(1.2);
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		margin: 0 auto;
+		transform: scale(1);
+	}
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 30px auto;
+		max-width: 410px;
+		max-height: 15px;
+		flex-wrap: nowrap;
+		top: -5px;
+		display: none;
+		@media screen and (max-width: 992px) {
+			display: block;
+			position: relative;
+			width: 100%;
+			transform: translate(0, -5px);
+		}
+		@media screen and (max-width: 639px) {
+			transform: scale(0.7);
+			align-items: center;
+			overflow-x: hidden;
+			padding-left: 0;
+		}
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -12px);
+			@media screen and (max-width: 992px) {
+				display: inline-block;
+				transform: translate(0, -17px);
+			}
+			&.slick-active button {
+				height: 9px;
+				width: 120px;
+				background: $link;
+				@media screen and (max-width: 992px) {
+					width: 180px;
+				}
+				@media screen and (max-width: 639px) {
+					width: 170px;
+					transform: translate(0, 8px);
+					display: inline-block;
+				}
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 120px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 992px) {
+				width: 190px;
+			}
+			@media screen and (max-width: 639px) {
+				width: 180px;
+				transform: translate(0, 8px);
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			margin: -70px 0px 0px;
+		}
+		@media screen and (max-width: 639px) {
+			top: 50%;
+		}
+		&.slick-prev {
+			left: 20%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				left: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				max-width: 40px;
+				left: 0%;
+			}
+		}
+		&.slick-next {
+			right: 20%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				right: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				right: 0;
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+// Слайдер для дополнительного оборудования
+.equip {
+	position: relative;
+	z-index: 12;
+	@media screen and (max-width: 992px) {
+		transform: scale(1.2);
+		overflow: hidden;
+	}
+	@media screen and (max-width: 639px) {
+		margin: 0 auto;
+		transform: scale(1);
+	}
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 30px auto;
+		max-width: 410px;
+		max-height: 15px;
+		flex-wrap: nowrap;
+		top: -5px;
+		@media screen and (max-width: 992px) {
+			width: 100%;
+			transform: translate(0, -5px);
+		}
+		@media screen and (max-width: 639px) {
+			transform: scale(0.7);
+			align-items: center;
+			overflow-x: hidden;
+			padding-left: 0;
+		}
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -7.5px);
+			&.slick-active button {
+				height: 9px;
+				width: 25px;
+				background: $link;
+				@media screen and (max-width: 639px) {
+					width: 40px;
+					transform: translate(0, 4px);
+				}
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 27px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 639px) {
+				width: 23px;
+				transform: translate(0, 4px);
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			margin: -40px 0px 0px;
+		}
+		@media screen and (max-width: 639px) {
+			margin: -70px 0 0;
+			top: 50%;
+		}
+		&.slick-prev {
+			left: 20%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				left: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				left: 0;
+				max-height: 40px;
+				max-width: 40px;
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+		&.slick-next {
+			right: 20%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 992px) {
+				right: -100%;
+			}
+			@media screen and (max-width: 639px) {
+				right: 0;
+				border-radius: 50%;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+// БЛОК НАШИ ПРОЕКТЫ!!!
+.projects {
+	background: #fff;
+	padding: 60px 0;
+	@media screen and (max-width: 639px) {
+		padding: 30px 0;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 60px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__block-row {
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+		margin-bottom: 40px;
+		justify-content: space-between;
+		&_reverse {
+			// Разворачивает блок делает реверс
+			flex-direction: row-reverse;
+		}
+		@media screen and (max-width: 992px) {
+			padding-left: 0;
+		}
+		@media screen and (max-width: 639px) {
+			// Выстраивает блок в колонку
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__info {
+		max-width: 570px;
+		transform: translate(-100px, 0);
+		opacity: 0;
+		transition-duration: 0.8s;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+		@media screen and (max-width: 992px) {
+			max-width: 350px;
+		}
+		@media screen and (max-width: 639px) {
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&_reverse {
+			transform: translate(100px, 0);
+			opacity: 0;
+			transition-duration: 0.8s;
+			&.anim {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+	}
+
+	&__label {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 57px;
+		letter-spacing: 0.08em;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			text-align: center;
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+			max-width: 350px;
+		}
+	}
+
+	&__buttons {
+		@media screen and (max-width: 992px) {
+		}
+		@media screen and (max-width: 639px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__button-second {
+		display: none;
+		margin-right: 30px;
+		@media screen and (max-width: 992px) {
+			display: inline-block;
+			max-width: 160px;
+			font-size: 12px;
+			padding: 10px;
+			margin-right: 20px;
+		}
+		@media screen and (max-width: 639px) {
+			width: 150px;
+			font-size: 11px;
+			line-height: 13px;
+			margin-right: 15px;
+		}
+	}
+
+	&__button-boss {
+		display: inline-block;
+		@media screen and (max-width: 992px) {
+			max-width: 150px;
+			font-size: 14px;
+			padding: 10px;
+		}
+		@media screen and (max-width: 639px) {
+			width: 127px;
+			font-size: 11px;
+			line-height: 13px;
+		}
+	}
+
+	&__image {
+		max-width: 500px;
+		@media screen and (max-width: 992px) {
+			max-width: 350px;
+		}
+		@media screen and (max-width: 639px) {
+			max-width: 240px;
+			margin-bottom: 15px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+// БЛОК СЕРТИФИКАТЫ СО СЛАЙДЕРОМ!!!
+.certificates {
+	background: #fff;
+	padding: 60px 0;
+	@media screen and (max-width: 992px) {
+		padding-bottom: 30px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 30px 0 0px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 50px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transform: translate(0, 100px);
+		transition-duration: 0.8s;
+		opacity: 0;
+		padding: 0 100px;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+		@media screen and (max-width: 992px) {
+			padding: 0 40px;
+		}
+		@media screen and (max-width: 639px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__sliders-text {
+		// Слайдер выполненные с помощью кнопок текста которые перелистываю картинки сертификатов
+		& .slick-list {
+			// Слайдер для отзывов Ограничивающая оболочка
+			overflow: hidden;
+		}
+		& .slick-track {
+			// Что бы слайдер работал вертикально нельзя применять флекс
+			display: flex;
+		}
+		& .slick-dots {
+			// Булеты слайдера
+			position: relative;
+			left: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			top: -50px;
+			& li {
+				list-style: none;
+				margin: 30px 0px 0;
+				max-width: 600px;
+				cursor: pointer;
+				@media screen and (max-width: 992px) {
+					max-width: 340px;
+				}
+				a {
+					font-weight: 400;
+					font-size: 24px;
+					line-height: 28px;
+					letter-spacing: 0.08em;
+					@media screen and (max-width: 992px) {
+						font-size: 18px;
+					}
+				}
+				&.slick-active a {
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	&__none {
+		// Это блок с обычным текстом который дублирует кнопки.
+		// На десктопе они отсутствуют, на мобилке они заменяют кнопки и спользуются как названия сертификатов
+		display: none;
+		@media screen and (max-width: 639px) {
+			display: block;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 10px;
+			max-width: 320px;
+			margin: 10px auto;
+		}
+	}
+
+	&__block {
+		display: block;
+		max-width: 600px;
+		@media screen and (max-width: 992px) {
+			max-width: 370px;
+		}
+	}
+
+	&__slider {
+		// Слайдер с картинками Сертификатов
+		position: relative;
+		z-index: 10;
+
+		& .slick-list {
+			// Слайдер для отзывов Ограничивающая оболочка
+			overflow: hidden;
+		}
+		& .slick-track {
+			// Что бы слайдер работал вертикально нельзя применять флекс
+			display: flex;
+		}
+		& .slick-dots {
+			// Булеты слайдера
+			position: relative;
+			left: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translate(-60px, 0);
+			@media screen and (max-width: 992px) {
+				transform: translate(-10px, 0);
+			}
+			& li {
+				list-style: none;
+				margin: 5px 10px;
+				transform: translate(0, -7.5px);
+				&.slick-active button {
+					height: 19px;
+					width: 19px;
+					background: $text;
+				}
+			}
+			& button {
+				transition-duration: 0.3s;
+				font-size: 0;
+				width: 12px;
+				height: 12px;
+				background: #c3cdf1;
+				border-radius: 10px;
+			}
+		}
+		& .slick-arrow {
+			// Стрелки переключатели
+			position: absolute;
+			top: 50%;
+			z-index: 2000;
+			font-size: 0;
+			@media screen and (max-width: 992px) {
+				margin: -40px 0px 0px;
+			}
+			@media screen and (max-width: 639px) {
+				margin: 0px;
+				top: 85%;
+			}
+			&.slick-prev {
+				left: 20%;
+				background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+				width: 40px;
+				height: 70px;
+				display: none;
+				z-index: 0;
+
+				@media screen and (max-width: 639px) {
+					max-width: 20px;
+					height: 50px;
+				}
+			}
+			&.slick-next {
+				right: 25%;
+				background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+				width: 40px;
+				height: 40px;
+				border-radius: 50px;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				@media screen and (max-width: 639px) {
+					width: 20px;
+					height: 50px;
+				}
+			}
+		}
+	}
+
+	&__image {
+		width: 520px;
+		margin: 0 auto;
+		padding: 10px;
+		@media screen and (max-width: 992px) {
+			max-width: 520px;
+		}
+		@media screen and (max-width: 639px) {
+			max-width: 320px;
+		}
+		@media screen and (max-width: 370px) {
+			max-width: 200px;
+		}
+		img {
+			max-width: 350px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+			@media screen and (max-width: 992px) {
+				max-width: 300px;
+			}
+			@media screen and (max-width: 639px) {
+				max-width: 320px;
+				transform: translate(-15px, 0);
+			}
+			@media screen and (max-width: 370px) {
+				max-width: 200px;
+			}
+		}
+	}
+}
+
+// БЛОК КОМПАНИИ
+.company {
+	background: #fff;
+	padding: 60px 0 40px;
+	@media screen and (max-width: 639px) {
+		padding: 30px 0;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 60px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		margin: 0 auto;
+		transform: translate(0, 100px);
+		opacity: 0;
+		transition-duration: 0.8s;
+		&.anim {
+			transform: translate(0);
+			opacity: 1;
+		}
+	}
+
+	&__item {
+		position: relative;
+		@media screen and (max-width: 639px) {
+			margin: 0 5px;
+		}
+	}
+
+	&__logo {
+		position: relative;
+		max-width: 370px;
+		max-height: 150px;
+		background: $bg-shape;
+		border-radius: 10px;
+		box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+		margin-bottom: 10px;
+		@media screen and (max-width: 992px) {
+			max-width: 325px;
+			margin: 0 auto 10px;
+		}
+		img {
+			object-fit: fill;
+			max-width: 100%;
+		}
+
+		&_act {
+			// Лого загораяются при наведение на них курсором
+			position: absolute;
+			top: 0;
+			opacity: 0;
+			transition-duration: 0.3s;
+			width: 110%;
+			@media screen and (max-width: 992px) {
+				width: 100%;
+				left: 0px;
+				margin-left: 5%;
+			}
+			@media screen and (max-width: 639px) {
+				width: 100%;
+				left: -5%;
+			}
+			&:hover {
+				opacity: 1;
+				transition-duration: 0.3s;
+			}
+		}
+	}
+	& .slick-list {
+		// Слайдер для отзывов Ограничивающая оболочка
+		overflow: hidden;
+	}
+	& .slick-track {
+		// Что бы слайдер работал вертикально нельзя применять флекс
+		display: flex;
+	}
+	& .slick-dots {
+		// Булеты слайдера
+		position: relative;
+		left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fbfbfb;
+		border-radius: 25px;
+		margin: 40px auto;
+		max-width: 410px;
+		max-height: 15px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+		@media screen and (max-width: 639px) {
+			margin: 20px auto 20px;
+			transform: scale(0.7);
+		}
+		& li {
+			list-style: none;
+			margin: 5px 10px;
+			transform: translate(0, -7.5px);
+			@media screen and (max-width: 639px) {
+				transform: translate(0, -4px);
+			}
+			&.slick-active button {
+				height: 9px;
+				width: 32px;
+				background: $link;
+				@media screen and (max-width: 639px) {
+					width: 30px;
+				}
+			}
+		}
+		& button {
+			transition-duration: 0.3s;
+			font-size: 0;
+			width: 32px;
+			height: 8px;
+			background: #fbfbfb;
+			border-radius: 10px;
+			@media screen and (max-width: 639px) {
+				width: 30px;
+			}
+		}
+	}
+	& .slick-arrow {
+		// Стрелки переключатели
+		position: absolute;
+		top: 30%;
+		border-radius: 50%;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+		z-index: 1;
+		font-size: 0;
+		@media screen and (max-width: 992px) {
+			margin: -40px 0px 0px;
+		}
+		@media screen and (max-width: 639px) {
+			margin: 0px;
+			top: 85%;
+		}
+		&.slick-prev {
+			left: -10%;
+			background: url("../img/left.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+
+			@media screen and (max-width: 639px) {
+				max-width: 20px;
+				height: 50px;
+			}
+		}
+		&.slick-next {
+			right: -10%;
+			background: url("../img/right.svg") 0px 0px / 100% no-repeat;
+			width: 40px;
+			height: 40px;
+			@media screen and (max-width: 639px) {
+				width: 20px;
+				height: 50px;
+			}
+		}
+	}
+}
+
+// БЛОК КОНТАКТЫ С КАРТОЙ
+.contacts {
+	background:
+		url("../img/footer-image.png") 0 0/ 100% auto no-repeat,
+		url("../img/backgrond-duble.png") 0px 100px/ 100% 100% no-repeat; // Данный кусок картинки служит для того что бы не портить скругление углов у бекграунда
+	padding: 60px 0;
+	@media screen and (max-width: 992px) {
+		background: none;
+	}
+	& .footer__info {
+		display: flex;
+		& .footer__item {
+			margin: 0 auto 56px;
+			&:nth-child(3) {
+				margin-bottom: 0;
+			}
+			&:nth-child(4) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media screen and (max-width: 992px) {
+		background: $bg;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 30px 0;
+		& .footer__info {
+			display: flex;
+			& .footer__item {
+				margin: 0 auto 30px;
+				&:nth-child(3) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		color: #fff;
+		margin-bottom: 50px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		//Реализовал с помощью Grid Layout так как при флексе не было видно карту, она проподала
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		@media screen and (max-width: 992px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: minmax(87px, 203px) / minmax(87px, 1fr) / minmax(87px, 1fr);
+		}
+		@media screen and (max-width: 639px) {
+			align-items: center;
+		}
+	}
+
+	&__info {
+		max-width: 520px;
+		@media screen and (max-width: 992px) {
+			max-width: 100%;
+		}
+		@media screen and (max-width: 639px) {
+		}
+	}
+
+	// Раньше там была просто информация с номером менеджера и почтой
+	// &__text {
+	// 	font-size: 24px;
+	// 	line-height: 29px;
+	// 	letter-spacing: 0.08em;
+	// 	color: #fff;
+	// 	margin-bottom: 55px;
+	// 	@media screen and (max-width: 639px) {
+	// 		font-size: 14px;
+	// 		line-height: 17px;
+	// 		margin-bottom: 20px;
+	// 	}
+	// }
+
+	// &__contacts {
+	// 	@media screen and (max-width: 992px) {
+	// 		margin-bottom: 40px;
+	// 	}
+	// 	@media screen and (max-width: 639px) {
+	// 		margin-bottom: 20px;
+	// 	}
+	// 	li {
+	// 		margin-bottom: 30px;
+	// 		position: relative;
+	// 		@media screen and (max-width: 639px) {
+	// 			margin-bottom: 20px;
+	// 		}
+	// 	}
+	// 	li:hover {
+	// 		.contacts__link {
+	// 			color: $linkhover;
+	// 			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	// 			transition-duration: 0.3s;
+	// 		}
+	// 		.contacts__icon_act {
+	// 			opacity: 1;
+	// 			transition-duration: 0.3s;
+	// 		}
+	// 	}
+	// }
+
+	// &__icon {
+	// 	width: 30px;
+	// 	position: absolute;
+	// 	@media screen and (max-width: 639px) {
+	// 		width: 20px;
+	// 	}
+	// 	&_act {
+	// 		opacity: 0;
+	// 		transition-duration: 0.3s;
+	// 	}
+	// }
+
+	// &__link {
+	// 	font-size: 24px;
+	// 	line-height: 29px;
+	// 	letter-spacing: 0.08em;
+	// 	color: #fff;
+	// 	transition-duration: 0.3s;
+	// 	padding-left: 60px;
+	// 	@media screen and (max-width: 639px) {
+	// 		font-size: 14px;
+	// 		line-height: 17px;
+	// 		padding-left: 30px;
+	// 	}
+	// }
+
+	&__map {
+		// Нижеописанное позволяет скруглять углы у яндекс.карт
+		max-width: 570px;
+		position: relative;
+		-moz-border-radius: 25px 25px 25px 25px; /* Firefox */
+		-webkit-border-radius: 25px 25px 25px 25px; /* Safari, Chrome */
+		-khtml-border-radius: 25px 25px 25px 25px; /* KHTML */
+		border-radius: 25px 25px 25px 25px; /* CSS3 */
+		overflow: hidden;
+		/* chrome bug fix */
+		-webkit-mask-image: url(data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+		@media screen and (max-width: 992px) {
+			max-width: 100%;
+		}
+		@media screen and (max-width: 639px) {
+			-moz-border-radius: 10px 10px 10px 10px; /* Firefox */
+			-webkit-border-radius: 10px 10px 10px 10px; /* Safari, Chrome */
+			-khtml-border-radius: 10px 10px 10px 10px; /* KHTML */
+			border-radius: 10px 10px 10px 10px; /* CSS3 */
+		}
+	}
+}
+
+// БЛОК ОСТАВИТЬ ЗАЯВКУ
+.request {
+	background: $bg;
+	padding: 60px 0;
+	@media screen and (max-width: 639px) {
+		padding: 30px 0;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		color: #fff;
+		text-align: center;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		// Сделан с помощью Grid Layout что бы на адаптивах можно было адекватно менять объекты местами
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr / minmax(30px, 40px);
+		margin-bottom: 40px;
+		column-gap: 30px;
+		@media screen and (max-width: 639px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr / 1fr / minmax(30px, 40px);
+			margin-bottom: 15px;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		padding: 21px 0 21px 50px;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.08em;
+		margin-bottom: 20px;
+		border-radius: 50px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+			margin-bottom: 10px;
+			padding: 6px 0 6px 30px;
+		}
+		&:focus {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+		}
+	}
+
+	&__textarea {
+		grid-column: 2/3;
+		grid-row: 1/3;
+		padding-top: 21px;
+		padding-left: 50px;
+		border-radius: 30px;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.08em;
+		@media screen and (max-width: 639px) {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			height: 100px;
+			border-radius: 15px;
+			font-size: 14px;
+			line-height: 17px;
+			padding: 6px 0 0 30px;
+		}
+		&:focus {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+		}
+	}
+
+	&__button {
+		display: block;
+		margin: 0 auto;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// Стилизация чекбокса
+.checkbox {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+	&__input {
+		display: none;
+		margin: 0px 10px 0px 0px;
+		width: 40px;
+		height: 40px;
+		&:checked + .checkbox__label::after {
+			// При клике на чекбокс галочка либо появится либо пропадет
+			opacity: 1;
+		}
+	}
+	&__label {
+		color: #fff;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		max-width: 450px;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.08em;
+		cursor: pointer;
+		@media screen and (max-width: 640px) {
+			margin: 10px 0px 0px;
+		}
+		&::before {
+			// Добавляет шейп для галочки
+			content: "";
+			height: 25px;
+			border: 2px solid #fff;
+			border-radius: 20px;
+			flex: 0 0 25px;
+			margin: 0px 10px 0px 0px;
+		}
+		&::after {
+			// Добавляет галочку выбора
+			content: "";
+			background: url("../img/check.svg") 0px 0px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 13px;
+			left: 7px;
+			opacity: 0;
+			@media screen and (max-width: 822px) {
+				top: 22px;
+			}
+			@media screen and (max-width: 640px) {
+				top: 12px;
+			}
+			@media screen and (max-width: 380px) {
+				top: 22px;
+			}
+			@media screen and (max-width: 330px) {
+				top: 20px;
+			}
+		}
+		a {
+			color: $link;
+			transition-duration: 0.5s;
+			&:hover {
+				transition-duration: 0.5s;
+				color: $linkhover;
+			}
+			&:visited {
+				transition-duration: 0.5s;
+				color: $linkvisited;
+			}
+		}
+	}
+}
+
+// ФУТТЕР
+.footer {
+	background: $bg;
+	padding: 20px 0 30px;
+	@media screen and (max-width: 992px) {
+		padding: 30px 0 15px;
+	}
+
+	&__logo {
+		max-width: 200px;
+		margin: 0 auto 30px;
+		@media screen and (max-width: 992px) {
+			max-width: 350px;
+			margin-bottom: 60px;
+		}
+		@media screen and (max-width: 639px) {
+			max-width: 150px;
+			margin-bottom: 40px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+		@media screen and (max-width: 992px) {
+			flex-wrap: wrap;
+			margin: 0 auto 30px;
+		}
+		@media screen and (max-width: 639px) {
+			display: none;
+		}
+	}
+
+	&__item {
+		@media screen and (max-width: 992px) {
+			width: 400px;
+			max-width: 267px;
+			margin: 0 auto 56px;
+		}
+		@media screen and (max-width: 639px) {
+			max-width: 230px;
+			margin: 0 auto 30px;
+		}
+	}
+
+	&__label {
+		font-size: 24px;
+		line-height: 29px;
+		letter-spacing: 0.08em;
+		color: #fff;
+		max-width: 230px;
+		margin-bottom: 5px;
+	}
+
+	&__contacts {
+		li {
+			position: relative;
+			height: 17px;
+			margin-bottom: 10px;
+		}
+		li:hover {
+			.footer__link {
+				color: $linkhover;
+				text-decoration-line: underline;
+				transition-duration: 0.3s;
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+			}
+			.footer__icon_act {
+				transition-duration: 0.3s;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__icon {
+		max-width: 17px;
+		position: absolute;
+		top: 8px;
+		left: 0;
+		@media screen and (max-width: 639px) {
+			top: 2px;
+		}
+
+		&_act {
+			opacity: 0;
+			transition-duration: 0.3s;
+		}
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.08em;
+		text-decoration-line: underline;
+		color: #fff;
+		padding-left: 32px;
+		transition-duration: 0.3s;
+		@media screen and (max-width: 639px) {
+		}
+	}
+
+	&__row {
+		margin: 0 auto 70px;
+		display: flex;
+		width: 230px;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 639px) {
+			margin: 0 auto 60px;
+		}
+	}
+
+	&__facebook {
+		position: relative;
+	}
+
+	&__instagram {
+		position: relative;
+	}
+
+	&__vk {
+		position: relative;
+	}
+
+	&__act {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition-duration: 0.3s;
+		&:hover {
+			opacity: 1;
+			transition-duration: 0.3s;
+		}
+	}
+
+	&__line {
+		height: 0.75px;
+		max-width: 970px;
+		margin: 0 auto 20px;
+		background: #fff;
+		@media screen and (max-width: 639px) {
+			max-width: 300px;
+		}
+	}
+
+	&__copyright {
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: #fff;
+		@media screen and (max-width: 639px) {
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+}
+
+// Поп Апы
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.55); // Затемнение заднего пространства
+	top: 0;
+	left: 0;
+	z-index: 550;
+	opacity: 0;
+	visibility: hidden; // Скрывает блок когда он не активен
+	overflow-y: auto; // Позволяет прокручивать поп ап вниз если контента слишком много
+	overflow-x: hidden; // Запрещает прокрутку вправо
+	transition-duration: 0.5s;
+	.checkbox {
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+		&__input {
+			display: none;
+			margin: 0px 10px 0px 0px;
+			width: 40px;
+			height: 40px;
+			&:checked + .checkbox__label::after {
+				// При клике на чекбокс галочка либо появится либо пропадет
+				opacity: 1;
+			}
+		}
+		&__label {
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			max-width: 450px;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: 0.08em;
+			cursor: pointer;
+			@media screen and (max-width: 640px) {
+				margin: 10px 0px 0px;
+			}
+			&::before {
+				// Добавляет шейп для галочки
+				content: "";
+				height: 25px;
+				border: 2px solid #fff;
+				border-radius: 20px;
+				flex: 0 0 25px;
+				margin: 0px 10px 0px 0px;
+			}
+			&::after {
+				// Добавляет галочку выбора
+				content: "";
+				background: url("../img/check.svg") 0px 0px no-repeat;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 13px;
+				left: 7px;
+				opacity: 0;
+				@media screen and (max-width: 640px) {
+					top: 22px;
+				}
+				@media screen and (max-width: 330px) {
+					top: 30px;
+				}
+			}
+			a {
+				color: $link;
+				transition-duration: 0.5s;
+				&:hover {
+					transition-duration: 0.5s;
+					color: $linkhover;
+				}
+				&:visited {
+					transition-duration: 0.5s;
+					color: $linkvisited;
+				}
+			}
+		}
+	}
+	&:target {
+		// При нанажитии делает поп ап видимым
+		opacity: 1;
+		visibility: visible;
+	}
+	&__area {
+		// То что помогает закрыть поп ап при клике на рандомную облась вне основного контента
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px 20px 30px 40px;
+		background-color: $bg;
+		border-radius: 18px;
+		max-width: 650px;
+		position: relative;
+		@media screen and (max-width: 639px) {
+			width: 95%;
+		}
+	}
+	&__close {
+		// Крестик в поп апе
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			background: #fff;
+			width: 30px;
+			height: 5px;
+			right: 20px;
+			border-radius: 10px;
+			@media screen and (max-width: 992px) {
+				height: 5px;
+			}
+			@media screen and (max-width: 639px) {
+				width: 20px;
+				height: 3px;
+				right: 10px;
+				top: 20px;
+			}
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+	&__name {
+		color: #fff;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 34px;
+		text-align: center;
+		margin: 0px 0px 20px;
+		@media screen and (max-width: 639px) {
+			font-size: 20px;
+			line-height: 24px;
+			margin: 0px 0px 20px;
+			max-width: 280px;
+		}
+	}
+	&__list {
+		color: #fff;
+		& li {
+			list-style: disc;
+			margin: 0px 0px 10px;
+		}
+	}
+	&__info {
+		color: #fff;
+		margin: -15px 0px 15px;
+	}
+	&__form {
+		// Форма в поп апе реализована так же как и в футтере все те же свойства
+		width: 470px;
+		height: 400px;
+		margin: 0px 0px 0px -10px;
+		height: 100%;
+		@media screen and (max-width: 639px) {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__item {
+		margin: 0px 0px 10px;
+		@media screen and (max-width: 639px) {
+			margin: 0px 0px 10px;
+		}
+		& input {
+			padding: 21px 0 21px 50px;
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: 0.08em;
+			margin-bottom: 10px;
+			border-radius: 50px;
+			width: 100%;
+			transition-duration: 0.3s;
+			@media screen and (max-width: 639px) {
+				font-size: 14px;
+				line-height: 16px;
+				height: 30px;
+				margin-bottom: 5px;
+				padding-left: 20px;
+			}
+			&:focus {
+				transition-duration: 0.3s;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+			}
+		}
+		&:last-child {
+			margin: 0px;
+		}
+	}
+	button {
+		margin: 20px auto 0;
+		transform: scale(0.7);
+		@media screen and (max-width: 640px) {
+			transform: scale(1);
+		}
+	}
+}
+
+// СТИЛИ ТОВАРОВ
+.main-equip {
+	background: url("../img/background.png") 0 -70px/ 100% 100% no-repeat;
+	padding: 160px 0 127px;
+	overflow: hidden;
+	@media screen and (max-width: 992px) {
+		background: url("../img/background.png") center 0px / auto 100% no-repeat;
+		padding-bottom: 50px;
+	}
+	@media screen and (max-width: 639px) {
+		background: url("../img/background.png") center 0px / auto 100% no-repeat;
+		padding: 90px 0 100px;
+	}
+
+	&__row {
+		display: flex;
+		padding: 0 75px;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 992px) {
+			padding: 0;
+			margin-bottom: 10px;
+		}
+		@media screen and (max-width: 639px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__info {
+		max-width: 552px;
+		color: #fff;
+		@media screen and (max-width: 639px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 57px;
+		letter-spacing: 0.1em;
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 29px;
+			text-align: center;
+		}
+		&_wrap {
+			max-width: 400px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__button {
+		@media screen and (max-width: 639px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		max-width: 378px;
+		@media screen and (max-width: 639px) {
+			max-width: 100%;
+			padding: 0 50px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+// Блок с ТАБАМИ Товаров
+.tabs-info {
+	padding-bottom: 60px;
+	@media screen and (max-width: 639px) {
+		padding-bottom: 30px;
+		margin-top: -60px;
+	}
+
+	&__wrapper {
+		padding: 0 80px;
+		margin-bottom: 100px;
+		@media screen and (max-width: 992px) {
+			padding: 0;
+		}
+	}
+
+	&__tabs {
+		margin: 0 auto 80px;
+		display: flex;
+		justify-content: center;
+		@media screen and (max-width: 639px) {
+			overflow-x: auto;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__tab {
+		// Внешний вид кнопок табов
+		padding: 20px 40px;
+		margin-right: 20px;
+		text-align: center;
+		color: #575656;
+		background: $bg-shape;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 50px;
+		transition-duration: 0.3s;
+		border: 3px solid $bg-shape;
+		font-weight: 600;
+		@media screen and (max-width: 639px) {
+			padding: 9px 20px;
+			margin-right: 15px;
+			margin-bottom: 10px;
+		}
+		&:hover {
+			transition-duration: 0.3s;
+			border: 3px solid $linkhover;
+			background: $linkhover;
+			color: #fff;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.active {
+			transition-duration: 0.3s;
+			border: 3px solid $linkhover;
+			background: $linkhover;
+			color: #fff;
+		}
+	}
+
+	&__block {
+		// Блоки табов
+		width: 100%;
+		display: none;
+		&.active {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 24px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 14px;
+		}
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__list {
+		// Текст описания выполнен в виде списка
+		padding-left: 20px;
+		margin-bottom: 24px;
+		@media screen and (max-width: 639px) {
+			margin-bottom: 14px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		li {
+			list-style: disc;
+			margin-bottom: 24px;
+			@media screen and (max-width: 639px) {
+				margin-bottom: 14px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__table {
+		// Таблица характеристики
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		li {
+			padding: 15px 20px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 16px;
+			line-height: 19px;
+			align-items: center;
+			@media screen and (max-width: 639px) {
+				font-size: 12px;
+				line-height: 14px;
+				padding: 5px 10px;
+			}
+			&:nth-child(odd) {
+				background: $bg-shape;
+			}
+		}
+	}
+
+	&__left {
+		max-width: 497px;
+		@media screen and (max-width: 639px) {
+			max-width: 160px;
+		}
+	}
+
+	&__right {
+		max-width: 156px;
+		text-align: right;
+		@media screen and (max-width: 639px) {
+			max-width: 100px;
+		}
+		&_wrap {
+			max-width: 200px;
+		}
+	}
+
+	&__buttons {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		@media screen and (max-width: 639px) {
+			align-items: center;
+		}
+	}
+
+	&__button {
+		// Кнопки позволяющие качать ресурсы
+		color: #575656;
+		background: $bg-shape;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 50px;
+		transition-duration: 0.3s;
+		border: 3px solid $bg-shape;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 20px;
+		position: relative;
+		@media screen and (max-width: 639px) {
+			padding: 6px 10px;
+			font-size: 11px;
+			line-height: 13px;
+		}
+		&:hover {
+			transition-duration: 0.3s;
+			border: 3px solid $linkhover;
+			color: #fff;
+			background: $linkhover;
+			& .tabs-info__icon img {
+				transition-duration: 0.3s;
+				opacity: 1;
+			}
+		}
+	}
+	&__icon {
+		// Иконки в кнопках
+		position: relative;
+		margin-right: 20px;
+		width: 44px;
+		height: 44px;
+		@media screen and (max-width: 639px) {
+			width: 22px;
+			height: 22px;
+			margin-right: 10px;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition-duration: 0.3s;
+			@media screen and (max-width: 639px) {
+				max-width: 22px;
+			}
+			&:last-child {
+				opacity: 0;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+// СТРАНИЦА ГЕЛИОС
+// Главный блок
+.main-gelios {
+	background: url("../img/background.png") 0 0/ 100% 100% no-repeat;
+	@media screen and (max-width: 992px) {
+		// На адаптиве меняю расположение бекграунда что бы пропало видимое скругление
+		background: url("../img/background.png") center -30px / auto 100% no-repeat;
+	}
+	@media screen and (max-width: 639px) {
+		background: url("../img/background.png") center 10px / auto 100% no-repeat;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		padding: 157px 0 113px;
+		@media screen and (max-width: 639px) {
+			padding: 115px 0 40px;
+		}
+	}
+
+	&__info {
+		margin-right: 45px;
+		@media screen and (max-width: 639px) {
+			margin-right: 0;
+			max-width: 290px;
+		}
+	}
+
+	&__title {
+		color: #fff;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 57px;
+		letter-spacing: 0.06em;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		width: 661px;
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 29px;
+			max-width: 100%;
+		}
+	}
+
+	&__subtitle {
+		color: #fff;
+		font-size: 40px;
+		line-height: 48px;
+		margin-bottom: 8px;
+		margin-bottom: 30px;
+		max-width: 443px;
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&__image {
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+		img {
+			max-width: 549px;
+		}
+	}
+}
+
+// Веб версия
+.web-version {
+	padding: 30px 0 120px;
+	@media screen and (max-width: 992px) {
+		padding-bottom: 60px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 15px 0 30px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 992px) {
+			flex-direction: row-reverse;
+			justify-content: flex-start;
+		}
+	}
+
+	&__image {
+		max-width: 489px;
+		@media screen and (max-width: 992px) {
+			transform: translate(50px, 0);
+		}
+		@media screen and (max-width: 639px) {
+			display: none;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		max-width: 570px;
+		@media screen and (max-width: 992px) {
+			margin-right: 20px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			line-height: 17px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// Повторяющиеся блоки с описанием мобильных приложений
+.gelios-item {
+	padding-bottom: 60px;
+	@media screen and (max-width: 992px) {
+		padding: 0 20px 60px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 0 10px 30px;
+	}
+
+	&__shape {
+		background: #f0f6f9;
+		border-radius: 20px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin: 0 auto;
+		max-width: 1272px;
+		padding: 50px;
+		@media screen and (max-width: 992px) {
+			padding: 50px 0px 10px;
+		}
+		@media screen and (max-width: 639px) {
+			padding: 20px 0px 0px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 440px 1fr;
+		align-items: center;
+		justify-items: center;
+		row-gap: 20px;
+		@media screen and (max-width: 992px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: auto 440px 1fr;
+			row-gap: 40px;
+		}
+		@media screen and (max-width: 639px) {
+			row-gap: 25px;
+			grid-template-rows: auto 1fr auto;
+		}
+	}
+
+	&__info {
+		padding-left: 50px;
+		@media screen and (max-width: 992px) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@media screen and (max-width: 992px) {
+			text-align: center;
+		}
+		@media screen and (max-width: 639px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 30px;
+		@media screen and (max-width: 992px) {
+			font-size: 14px;
+			line-height: 17px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		@media screen and (max-width: 992px) {
+			justify-content: center;
+		}
+	}
+
+	&__button {
+		margin-right: 40px;
+		display: flex;
+		align-items: center;
+		padding: 14px 0;
+		@media screen and (max-width: 639px) {
+			padding: 8px 0;
+			margin-right: 15px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			.gelios-item__icon img:last-child {
+				opacity: 1;
+				transition-duration: 0.3s;
+			}
+		}
+	}
+
+	&__icon {
+		position: relative;
+		height: 32px;
+		width: 32px;
+		margin-right: 35px;
+		margin-left: 25px;
+		@media screen and (max-width: 639px) {
+			height: 18px;
+			width: 18px;
+			margin-left: 20px;
+			margin-right: 15px;
+			top: -2px;
+			left: -5px;
+		}
+		img {
+			position: absolute;
+			@media screen and (max-width: 639px) {
+				max-width: 18px;
+			}
+			&:last-child {
+				opacity: 0;
+				transition-duration: 0.3s;
+			}
+		}
+		&_google {
+			height: 25px;
+			width: 25px;
+			@media screen and (max-width: 639px) {
+				height: 14px;
+				width: 14px;
+				top: 0;
+				img {
+					max-width: 14px;
+				}
+			}
+		}
+	}
+
+	&__image {
+		max-width: 379px;
+		@media screen and (max-width: 992px) {
+			grid-row: 2/3;
+		}
+		@media screen and (max-width: 639px) {
+			padding: 0 10%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		background: $white;
+		grid-column: 1/3;
+		justify-self: stretch;
+		padding: 20px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		@media screen and (max-width: 992px) {
+			grid-column: 1 / end;
+			margin-bottom: 10px;
+		}
+		@media screen and (max-width: 639px) {
+			padding: 10px 5px;
+		}
+	}
+
+	&__label {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		@media screen and (max-width: 639px) {
+			text-align: center;
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&__table {
+		padding-left: 20px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 70px;
+		row-gap: 20px;
+		@media screen and (max-width: 639px) {
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 10px;
+			column-gap: 0px;
+		}
+		li {
+			list-style: disc;
+			max-width: 500px;
+			@media screen and (max-width: 639px) {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
+}
+
+// ГелиосСервис
+.geliosservice {
+	.gelios-item__grid {
+		row-gap: 40px;
+		@media screen and (max-width: 639px) {
+			row-gap: 20px;
+		}
+	}
+	.gelios-item__item {
+		&_4 {
+			grid-row: 2/4;
+			@media screen and (max-width: 639px) {
+				grid-row: auto;
+			}
+		}
+		&_6 {
+			grid-row: 4/6;
+			@media screen and (max-width: 639px) {
+				grid-row: auto;
+			}
+		}
+		&_8 {
+			grid-column: 2/3;
+			@media screen and (max-width: 639px) {
+				grid-column: auto;
+			}
+		}
+	}
+}
+
+// ГелиосТрекер
+.geliostracker {
+	.gelios-item__item {
+		&_2 {
+			grid-row: 1/2;
+			@media screen and (max-width: 639px) {
+				grid-row: auto;
+			}
+		}
+		&_3 {
+			@media screen and (max-width: 992px) {
+				grid-row: 1/2;
+				grid-row: auto;
+			}
+		}
+	}
+}
+
+// Кнопка скролл апп
+.scroll-up {
+	position: fixed;
+	z-index: 50;
+	top: 85%;
+	right: 5%;
+	width: 70px;
+	height: 70px;
+	background: $white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transition-duration: 0.3s;
+	@media screen and (max-width: 639px) {
+		transform: scale(0.7);
+	}
+	&:hover {
+		background: $linkhover;
+		transition-duration: 0.3s;
+		.scroll-up__line {
+			&::before,
+			&::after {
+				transition-duration: 0.3s;
+				background: #fff;
+			}
+		}
+	}
+	&__line {
+		position: relative;
+		&::before,
+		&::after {
+			// Делает внешний вид стрелочек спойлера
+			content: " ";
+			width: 15px;
+			height: 3px;
+			background-color: $text;
+			position: absolute;
+			top: 33px;
+			transition-duration: 0.3s;
+		}
+		&::before {
+			transform: rotate(40deg);
+			right: 22.5px;
+		}
+		&::after {
+			transform: rotate(-40deg);
+			left: 22.5px;
+		}
+	}
+}
+
+// Страница Нововстей
+.news {
+	&__title {
+		text-align: center;
+		@media screen and (max-width: 639px) {
+			font-size: 32px;
+			margin-top: 150px;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin: 100px 0 300px 0;
+		@media screen and (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__img {
+		width: 30%;
+		border-radius: 20px;
+		@media screen and (max-width: 1200px) {
+			width: 400px;
+			margin-bottom: 40px;
+		}
+		@media screen and (max-width: 430px) {
+			width: 100%;
+		}
+	}
+	&-right {
+		width: 65%;
+		@media screen and (max-width: 1200px) {
+			width: 80%;
+		}
+		@media screen and (max-width: 430px) {
+			width: 100%;
+		}
+	}
+	&-name {
+		&__capiton {
+			font-size: 16px;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			opacity: 0.7;
+			@media screen and (max-width: 430px) {
+				width: 100%;
+			}
+		}
+		&__text {
+			font-size: 32px;
+			margin-bottom: 30px;
+			line-height: 140%;
+			@media screen and (max-width: 430px) {
+				font-size: 26px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&__descr {
+		margin-bottom: 60px;
+		line-height: 140%;
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 430px) {
+			margin-bottom: 30px;
+		}
+	}
+	&-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: none;
+		@media screen and (max-width: 639px) {
+			width: 200px;
+			padding: 15px;
+			font-size: 16px;
+		}
+		@media screen and (max-width: 430px) {
+		}
+	}
+}

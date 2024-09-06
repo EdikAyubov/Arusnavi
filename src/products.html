@@ -1,0 +1,847 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Продукция Arusnavi</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/products-style.min.css" />
+	<!-- Добавляем иконку к сайту -->
+	<link rel="shortcut icon" href="@img/favicon.ico" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Адаптивный метатег -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<script type="module" src="js/device-filter.js"></script>
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Добавляем хедер -->
+		@@include('html/header.html',{})
+		<!-- Хлебные крошки -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="breadcrumb__list">
+					<li><a href="index.html">Главная</a></li>
+					<img src="@img/arrow.svg" alt="" class="breadcrumb__image">
+					<li><a href="products.html">Продукты</a></li>
+					<img src="@img/arrow-act.svg" alt="" class="breadcrumb__image">
+					<li class="breadcrumb__tab breadcrumb__tab_all active"><a href="products.html"><span>Все
+								продукты</span></a>
+					</li>
+					<li class="breadcrumb__tab breadcrumb__tab_trackers"><a href="products.html"><span>GPS-трекеры</span></a>
+					</li>
+					<li class="breadcrumb__tab breadcrumb__tab_fuel"><a href="products.html"><span>Контроль
+								топлива</span></a></li>
+					<li class="breadcrumb__tab breadcrumb__tab_temperature"><a href="products.html"><span>Контроль
+								температуры</span></a></li>
+					<li class="breadcrumb__tab breadcrumb__tab_gps"><a href="products.html"><span>GPS-маяки</span></a></li>
+					<li class="breadcrumb__tab breadcrumb__tab_ble"><a href="products.html"><span>Беспроводное
+								оборудование</span></a></li>
+					<li class="breadcrumb__tab breadcrumb__tab_equipment"><a href="products.html"><span>Дополнительное
+								оборудование</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Главный блок -->
+		<div class="main-products" id="main">
+			<div class="container">
+				<div class="main-products__row">
+					<h2 class="main-products__title">НАВИГАЦИОННОЕ ОБОРУДОВАНИЕ</h2>
+					<div class="main-products__image">
+						<img src="@img/products-image.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с переключателями и карточками товаров -->
+		<div class="categories">
+			<div class="container">
+				<div class="categories__row">
+					<div class="categories__null"></div>
+					<h2 class="categories__title title">Продукты</h2>
+					<a class="popup-link" href="#filter-pop"><img class="categories__icon" src="@img/filter-icon.svg"
+							alt=""></a>
+				</div>
+				<div class="categories__wrapper">
+					<!-- Кнопки переключения ТАБОВ -->
+					<nav class="tabs">
+						<ul class="tabs__items">
+							<li data-f="all__tub" class="tabs__item tabs__item_all">Все продукты</li>
+							<li data-f="trackers__tub" class="tabs__item tabs__item_trackers">GPS-трекеры</li>
+							<li data-f="fuel__tub" class="tabs__item tabs__item_fuel">Контроль топлива</li>
+							<li data-f="temperature__tub" class="tabs__item tabs__item_temperature">Контроль температуры</li>
+							<!-- <li data-f="gps__tub" class="tabs__item tabs__item_gps">GPS-маяки</li> -->
+							<li data-f="ble__tub" class="tabs__item tabs__item_ble">Беспроводное оборудование</li>
+							<li data-f="equipment__tub" class="tabs__item tabs__item_equipment">Доп. оборудование</li>
+						</ul>
+					</nav>
+					<nav class="filter trackers__tub equipment__tub height">
+						<div class="filter__categories">
+							<p class="filter__title">Категории:</p>
+							<nav>
+								<ul class="filter__items">
+									<li data-f="all__tub" class="filter__item filter__item_all active">Все продукты</li>
+									<li data-f="trackers__tub" class="filter__item filter__item_trackers">GPS-трекеры</li>
+									<li data-f="fuel__tub" class="filter__item filter__item_fuel">Контроль топлива</li>
+									<li data-f="temperature__tub" class="filter__item filter__item_temperature">Контроль
+										температуры</li>
+									<!-- <li data-f="gps__tub" class="filter__item filter__item_gps">GPS-маяки</li> -->
+									<li data-f="ble__tub" class="filter__item filter__item_ble">Беспроводное оборудование</li>
+									<li data-f="equipment__tub" class="filter__item filter__item_equipment">Доп. оборудование
+									</li>
+								</ul>
+								<!-- <a href="#trackers" data-f="trackers" class="filter__item filter__item_trackers">GPS-трекеры</a>
+								<a href="#fuel" class="filter__item filter__item_fuel">Контроль топлива</a>
+								<a href="#temperature" class="filter__item filter__item_temperature">Контроль температуры</a>
+								<a href="#gps" class="filter__item filter__item_gps">GPS-маяки</a>
+								<a href="#ble" class="filter__item filter__item_ble">Беспроводное оборудование</a>
+								<a href="#equipment" class="filter__item filter__item_equipment">Доп. оборудование</a> -->
+							</nav>
+							<div class="filter__tab trackers__tub equipment__tub hide-product">
+								<form class="filter__parameter" action="#">
+									<section class="filter__gps trackers__tub hide-product">
+										<p class="filter__title">Количество входов:</p>
+										<div>
+											<input id="all-enter" type="radio" checked name="inputCount" value="all" class="radio">
+											<label for="all-enter" class="radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="2-enter" type="radio" name="inputCount" value="2" class="radio">
+											<label for="2-enter" class="radio__label">2 входа</label>
+										</div>
+										<div>
+											<input id="3-enter" type="radio" name="inputCount" value="3" class="radio">
+											<label for="3-enter" class="radio__label">3 входа</label>
+										</div>
+										<div>
+											<input id="4-enter" type="radio" name="inputCount" value="4" class="radio">
+											<label for="4-enter" class="radio__label">4 входа</label>
+										</div>
+										<div>
+											<input id="7-enter" type="radio" name="inputCount" value="7" class="radio">
+											<label for="7-enter" class="radio__label">7 входов</label>
+										</div>
+										<div>
+											<input id="10-enter" type="radio" name="inputCount" value="10" class="radio">
+											<label for="10-enter" class="radio__label">10 входов</label>
+										</div>
+										<p class="filter__title">Антенная навигация:</p>
+										<div>
+											<input id="all-nav" type="radio" checked name="navAntenna" value="all" class="radio">
+											<label for="all-nav" class="radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="external-nav" type="radio" name="navAntenna" value="external" class="radio">
+											<label for="external-nav" class="radio__label">Внешняя</label>
+										</div>
+										<div>
+											<input id="internal-nav" type="radio" name="navAntenna" value="internal" class="radio">
+											<label for="internal-nav" class="radio__label">Внутренняя</label>
+										</div>
+										<p class="filter__title">GSM антенна:</p>
+										<div>
+											<input id="all-gsm" type="radio" checked name="gsmAntenna" value="all" class="radio">
+											<label for="all-gsm" class="radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="external-gsm" type="radio" name="gsmAntenna" value="external" class="radio">
+											<label for="external-gsm" class="radio__label">Внешняя</label>
+										</div>
+										<div>
+											<input id="internal-gsm" type="radio" name="gsmAntenna" value="internal" class="radio">
+											<label for="internal-gsm" class="radio__label">Внутренняя</label>
+										</div>
+										<p class="filter__title">GSM модем:</p>
+										<div>
+											<input id="all-modem" type="radio" checked name="gsmModem" value="all" class="radio">
+											<label for="all-modem" class="radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="2g-modem" type="radio" name="gsmModem" value="2G" class="radio">
+											<label for="2g-modem" class=" radio__label">2G</label>
+										</div>
+										<div>
+											<input id="4g-modem" type="radio" name="gsmModem" value="2G4G" class="radio">
+											<label for="4g-modem" class="radio__label">2G | 4G(LTE)</label>
+										</div>
+										<p class="filter__title">SIM карты:</p>
+										<div>
+											<input id="all-sim" type="radio" checked name="simCardSlots" value="all" class="radio">
+											<label for="all-sim" class=" radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="one-sim" type="radio" name="simCardSlots" value="oneSimCardOrSimChip"
+												class="radio">
+											<label for="one-sim" class=" radio__label">1 SIM карта или SIM chip</label>
+										</div>
+										<div>
+											<input id="two-sim" type="radio" name="simCardSlots" value="twoSimCardOrSimChips"
+												class="radio">
+											<label for="two-sim" class="radio__label">2 SIM картs или SIM chip</label>
+										</div>
+										<p class="filter__title">Интерфейсы:</p>
+										<div>
+											<input id="bluetooth" type="checkbox" name="hasBLE" class="check">
+											<label for="bluetooth" class=" check__label">BLE Bluetooth</label>
+										</div>
+										<div>
+											<input id="1-wire" type="checkbox" name="hasOneWire" class="check onewire">
+											<label for="1-wire" class=" check__label onewire">1-WIRE</label>
+										</div>
+										<div>
+											<input id="CAN" type="checkbox" name="hasCan" class="check">
+											<label for="CAN" class=" check__label">CAN</label>
+										</div>
+										<div>
+											<input id="RS485" type="checkbox" name="hasRS485" class="check">
+											<label for="RS485" class=" check__label">RS485</label>
+										</div>
+										<div>
+											<input id="RS232" type="checkbox" name="hasRS232" class="check">
+											<label for="RS232" class=" check__label">RS232</label>
+										</div>
+										<p class="filter__title">Функциональные особенности:</p>
+										<div>
+											<input id="move" type="checkbox" name="hasAccelerometer" class="check">
+											<label for="move" class=" check__label">Датчик движения (акселерометр)</label>
+										</div>
+										<div>
+											<input id="magnit" type="checkbox" name="hasMagnit" class="check">
+											<label for="magnit" class=" check__label">Магнитное крепление</label>
+										</div>
+										<div>
+											<input id="odometr" type="checkbox" name="hasOdometr" class="check">
+											<label for="odometr" class=" check__label">Встроенный одометр</label>
+										</div>
+										<div>
+											<input id="glonass" type="checkbox" name="hasGlonass" class="check">
+											<label for="glonass" class=" check__label">Поддержка ГЛОНАСС</label>
+										</div>
+										<div>
+											<input id="servers" type="checkbox" name="hasServers" class="check">
+											<label for="servers" class=" check__label">Отправка данных на несколько
+												серверов</label>
+										</div>
+										<section class="filter__hidden">
+											<div>
+												<input id="connection" type="checkbox" name="hasConnection" class="check">
+												<label for="connection" class=" check__label">Голосовая связь</label>
+											</div>
+											<div>
+												<input id="wifi" type="checkbox" name="hasWifi" class="check">
+												<label for="wifi" class=" check__label">Поддержка Wi-Fi</label>
+											</div>
+											<div>
+												<input id="alarm" type="checkbox" name="hasAlarm" class="check">
+												<label for="alarm" class=" check__label">Тревожная кнопка
+												</label>
+											</div>
+											<div>
+												<input id="driver" type="checkbox" name="hasDriver" class="check">
+												<label for="driver" class=" check__label">Идентификация водителя
+												</label>
+											</div>
+											<!-- <div>
+												<input id="chat" type="checkbox" name="hasChat" class="check">
+												<label for="chat" class=" check__label">Чат с водителем
+												</label>
+											</div> -->
+											<div>
+												<input id="connect-camera" type="checkbox" name="hasConnectCamera" class="check">
+												<label for="connect-camera" class=" check__label">Подключение камеры
+												</label>
+											</div>
+											<div>
+												<input id="tahograf" type="checkbox" name="hasTahograf" class="check">
+												<label for="tahograf" class=" check__label">Загрузка файлов с тахографа
+												</label>
+											</div>
+											<div>
+												<input id="driving" type="checkbox" name="hasDriving" class="check">
+												<label for="driving" class=" check__label">ECO driving
+												</label>
+											</div>
+											<div>
+												<input id="sensor-analog" type="checkbox" name="hasSensorAnalog" class="check">
+												<label for="sensor-analog" class=" check__label">Аналоговые датчики
+												</label>
+											</div>
+											<!-- <div>
+												<input id="lbs" type="checkbox" name="hasLbs" class="check">
+												<label for="lbs" class=" check__label">LBS
+												</label>
+											</div> -->
+											<div>
+												<input id="sensor-digital" type="checkbox" name="hasSensorDigital" class="check">
+												<label for="sensor-digital" class=" check__label">Цифровые датчики
+												</label>
+											</div>
+											<div>
+												<input id="sms" type="checkbox" name="hasSms" class="check">
+												<label for="sms" class=" check__label">Управляющие команды по SMS
+												</label>
+											</div>
+											<div>
+												<input id="tcp" type="checkbox" name="hasTcp" class="check">
+												<label for="tcp" class=" check__label">Связь через TCP
+												</label>
+											</div>
+											<div>
+												<input id="gprs" type="checkbox" name="hasGprs" class="check">
+												<label for="gprs" class=" check__label">Управляющие команды по GPRS
+												</label>
+											</div>
+											<div>
+												<input id="mobileye" type="checkbox" name="hasMobilEye" class="check">
+												<label for="mobileye" class=" check__label">Поддержка MobilEye
+												</label>
+											</div>
+											<div>
+												<input id="modbus" type="checkbox" name="hasModbus" class="check">
+												<label for="modbus" class=" check__label">Поддержка протокола Modbus
+												</label>
+											</div>
+										</section>
+										<p class="filter__more">Посмотреть еще...</p>
+									</section>
+									<section class="filter__equip equipment__tub hide-product">
+										<p class="filter__title">Виды оборудования:</p>
+										<div>
+											<input id="all-eq" type="radio" checked name="typeEq" value="all" class="radio">
+											<label for="all-eq" data-f="equipment__tub" class="radio__label">Показать все</label>
+										</div>
+										<div>
+											<input id="wifi-eq" type="radio" name="typeEq" value="wiFi" class="radio">
+											<label for="wifi-eq" class="radio__label">Wi-Fi модуль</label>
+										</div>
+										<div>
+											<input id="equip-can" type="radio" name="typeEq" value="can" class="radio">
+											<label for="equip-can" class="radio__label">CAN считыватель</label>
+										</div>
+										<div>
+											<input id="equip-relay" type="radio" name="typeEq" value="relay" class="radio">
+											<label for="equip-relay" class="radio__label">Реле</label>
+										</div>
+										<div>
+											<input id="equip-camera" type="radio" name="typeEq" value="camera" class="radio">
+											<label for="equip-camera" class="radio__label">Камера</label>
+										</div>
+										<div>
+											<input id="equip-microphone" type="radio" name="typeEq" value="microphone"
+												class="radio">
+											<label for="equip-microphone" class="radio__label">Микрофон</label>
+										</div>
+										<div>
+											<input id="equip-button" type="radio" name="typeEq" value="button" class="radio">
+											<label for="equip-button" class="radio__label">Тревожная кнопка</label>
+										</div>
+										<div>
+											<input id="equip-anten" type="radio" name="typeEq" value="anten" class="radio">
+											<label for="equip-anten" class="radio__label">Антенны ГЛОНАСС + GSM</label>
+										</div>
+										<div>
+											<input id="equip-wire" type="radio" name="typeEq" value="wire" class="radio">
+											<label for="equip-wire" class="radio__label">Разъемы с проводами</label>
+										</div>
+										<div>
+											<input id="equip-cable" type="radio" name="typeEq" value="cable" class="radio">
+											<label for="equip-cable" class="radio__label">Кабель</label>
+										</div>
+										<div>
+											<input id="equip-akb" type="radio" name="typeEq" value="akb" class="radio">
+											<label for="equip-akb" class="radio__label">Аккумуляторы</label>
+										</div>
+									</section>
+								</form>
+							</div>
+							<a href="" data-f="reset"
+								class="filter__button trackers__tub equipment__tub hide-product">Сбросить</a>
+						</div>
+					</nav>
+					<div class="product__body">
+						<!-- ТАБ Трекеры -->
+						<div class="product__block" id="trackers">
+							<!-- Арнави Л2 -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-l2 ">
+								<a href="tracker/arnavi-l2.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-l2.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI L2</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-l2.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-l2" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави Л2 в прикуриватель -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-l2 ">
+								<a href="tracker/arnavi-l2-prikyrivatel.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-l2-prikyrivatel.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI L2 в прикуриватель</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-l2-prikyrivatel.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-l2" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави Л2 герметичный -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-l2 ">
+								<a href="tracker/arnavi-l2-germo.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-l2-germo.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI L2 герметичный</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-l2-germo.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-l2" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави А2-Сериес -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-a2">
+								<a href="tracker/arnavi-a2-series.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/a2.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI A2</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-a2-series.html" class="product__link">Подробнее</a>
+								<a href="#request-a-series" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави А3-Сериес -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-a3">
+								<a href="tracker/arnavi-a3-series.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/a3.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI A3</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-a3-series.html" class="product__link">Подробнее</a>
+								<a href="#request-a-series" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави А4MAX-Сериес -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-a4">
+								<a href="tracker/arnavi-a4-series.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/a4-max.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI A4 MAX 4G</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-a4-series.html" class="product__link">Подробнее</a>
+								<a href="#request-a-series" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави А4-Сериес -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-a4">
+								<a href="tracker/arnavi-a4.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/a4.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI A4</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-a4.html" class="product__link">Подробнее</a>
+								<a href="#request-a-series" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Интерграл 4 -->
+							<div class="product__el all__tub trackers__tub nav-track integral-4">
+								<a href="tracker/arnavi-integral-4.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/integral-4.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name_nowrap">INTEGRAL 4</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-integral-4.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-integral-4"
+									class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави 6 -->
+							<div class="product__el all__tub trackers__tub nav-track arnavi-6">
+								<a href="tracker/arnavi-6.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-6.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI 6</h3>
+								<p class="product__text">Навигационный котроллер</p>
+								<a href="tracker/arnavi-6.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-6" class="product__button popup-link button-white ">Заказать</a>
+							</div>
+							<!-- ТАБ Контроль топлива -->
+							<!-- Арнави УНУ -->
+							<div class="product__el all__tub fuel__tub">
+								<a href="fuel/arnavi-unu.html">
+									<div class="product__image">
+										<img src="@img/products/fuel/arnavi-unu.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI УНУ</h3>
+								<p class="product__text">Устройство настройки универсальное</p>
+								<a href="fuel/arnavi-unu.html" class="product__link">Подробнее</a>
+								<a href="#request-unu" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- ДУТ ЛС 2 ДФ -->
+							<div class="product__el all__tub fuel__tub">
+								<a href="fuel/dut-ls-2df.html">
+									<div class="product__image">
+										<img src="@img/products/fuel/arnavi-ls2df.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name_nowrap">ARNAVI ДУТ LS-2DF</h3>
+								<p class="product__text">Датчик уровня топлива в металлическом корпусе</p>
+								<a href="fuel/dut-ls-2df.html" class="product__link">Подробнее</a>
+								<a href="#request-ls-2df" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- ДУТ ЛС 2 ДФ 2-->
+							<div class="product__el all__tub fuel__tub">
+								<a href="fuel/dut-ls-2df-2.html">
+									<div class="product__image">
+										<img src="@img/products/fuel/arnavi-ls2df-2.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name_nowrap">ARNAVI ДУТ LS-2DF</h3>
+								<p class="product__text">Датчик уровня топлива в пластмассовом корпусе</p>
+								<a href="fuel/dut-ls-2df-2.html" class="product__link">Подробнее</a>
+								<a href="#request-ls-2df" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- ДУТ ЛС 2 ДФ БЛЕ -->
+							<div class="product__el all__tub fuel__tub ble__tub">
+								<a href="fuel/dut-ls-2df-ble.html">
+									<div class="product__image">
+										<img src="@img/products/fuel/arnavi-ls2df-ble.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name_nowrap">ARNAVI LS-2DF BLE</h3>
+								<p class="product__text">Датчик уровня топлива беспроводной в пластмассовом корпусе</p>
+								<a href="fuel/dut-ls-2df-ble.html" class="product__link">Подробнее</a>
+								<a href="#request-ls-2df" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- ТАБ Контроль температуры -->
+							<!-- Арнави температур -->
+							<div class="product__el all__tub temperature__tub">
+								<a href="temperature/arnavi-temperature.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-temperature.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name">ARNAVI TEMPERATURE</h3>
+								<p class="product__text">Датчик измерения температуры</p>
+								<a href="temperature/arnavi-temperature.html" class="product__link">Подробнее</a>
+								<a href="#request-temperature" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави BTS v.3 -->
+							<div class="product__el all__tub temperature__tub ble__tub">
+								<a href="temperature/arnavi-bts-v3.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-ble-termo.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI BTS v.3</h3>
+								<p class="product__text">Беспроводной термодатчик</p>
+								<a href="temperature/arnavi-bts-v3.html" class="product__link">Подробнее</a>
+								<a href="#request-ble-termo" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави BTS v.5 -->
+							<div class="product__el all__tub temperature__tub ble__tub">
+								<a href="temperature/arnavi-bts-v5.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-bts5.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI BTS v.5</h3>
+								<p class="product__text">Беспроводной универсальный датчик</p>
+								<a href="temperature/arnavi-bts-v5.html" class="product__link">Подробнее</a>
+								<a href="#request-ble-termo" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави BTS v.6 Герметичный -->
+							<div class="product__el all__tub temperature__tub ble__tub">
+								<a href="temperature/arnavi-bts-v6.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-bts-v.6_min.png" alt="">
+									</div>
+								</a>	
+								<h3 class="product__name">ARNAVI BTS v.6</h3>
+								<p class="product__text">Беспроводной универсальный датчик</p>
+								<a href="temperature/arnavi-bts-v6.html" class="product__link">Подробнее</a>
+								<a href="#request-ble-termo" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- ТАБ GPS -->
+							<!-- <div class="product__el all__tub trackers__tub gps__tub arnavi-becon">
+								<a href="gps/arnavi-beacon.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-beacon.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI BEACON</h3>
+								<p class="product__text">Автономное спутниковое устройство</p>
+								<a href="gps/arnavi-beacon.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-beacon" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<div class="product__el all__tub trackers__tub gps__tub arnavi-becon-qi">
+								<a href="gps/arnavi-beacon-qi.html">
+									<div class="product__image">
+										<img src="@img/products/tracker/arnavi-beacon-qi.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI BEACON QI</h3>
+								<p class="product__text">Автономное спутниковое устройство с беспроводной зарядкой</p>
+								<a href="gps/arnavi-beacon-qi.html" class="product__link">Подробнее</a>
+								<a href="#request-arnavi-beacon" class="product__button popup-link button-white">Заказать</a>
+							</div> -->
+							<!-- ТАБ Дополнительное оборудование -->
+							<!-- Арнави Вай фай -->
+							<div class="product__el all__tub equipment__tub arnavi-wifi">
+								<a href="equip/arnavi-wifi.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-wifi.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI WI-FI</h3>
+								<p class="product__text">Модуль Arnavi Wi-Fi</p>
+								<a href="equip/arnavi-wifi.html" class="product__link">Подробнее</a>
+								<a href="#request-wi-fi" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави КАН -->
+							<div class="product__el all__tub equipment__tub arnavi-can">
+								<a href="fuel/arnavi-can.html">
+									<div class="product__image">
+										<img src="@img/products/fuel/arnavi-can.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI CAN</h3>
+								<p class="product__text">Считыватель</p>
+								<a href="fuel/arnavi-can.html" class="product__link">Подробнее</a>
+								<a href="#request-can" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави Протект -->
+							<div class="product__el all__tub equipment__tub relay">
+								<a href="equip/arnavi-protect.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-protect.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI PROTECT</h3>
+								<p class="product__text">Блок защиты</p>
+								<a href="equip/arnavi-protect.html" class="product__link">Подробнее</a>
+								<a href="#request-protect" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави БЛЕ РЕЛЕЙ -->
+							<div class="product__el all__tub equipment__tub ble__tub relay2">
+								<a href="equip/arnavi-ble-relay.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-plc.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI BLE-RELAY</h3>
+								<p class="product__text">Беспроводное реле</p>
+								<a href="equip/arnavi-ble-relay.html" class="product__link">Подробнее</a>
+								<a href="#request-ble-relay" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Арнави ПЛЦ -->
+							<div class="product__el all__tub equipment__tub ble__tub relay3">
+								<a href="equip/arnavi-plc.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-plc.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ARNAVI PLC</h3>
+								<p class="product__text">Беспроводное реле</p>
+								<a href="equip/arnavi-plc.html" class="product__link">Подробнее</a>
+								<a href="#request-plc" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Реле блокировки -->
+							<div class="product__el all__tub equipment__tub relay4">
+								<a href="equip/arnavi-block.html">
+									<div class="product__image">
+										<img src="@img/products/equip/arnavi-block.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name product__name_nowrap">РЕЛЕ БЛОКИРОВКИ</h3>
+								<p class="product__text">Реле блокировки</p>
+								<a href="equip/arnavi-block.html" class="product__link">Подробнее</a>
+								<a href="#request-block" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- <div class="product__el all__tub equipment__tub arnavi-camera">
+								<a href="equip/jiahe-camera.html">
+									<div class="product__image">
+										<img src="@img/products/equip/jiahe-camera.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">JIAHE CAMERA</h3>
+								<p class="product__text">Фотокамера</p>
+								<a href="equip/jiahe-camera.html" class="product__link">Подробнее</a>
+								<a href="#request-camera" class="product__button popup-link button-white">Заказать</a>
+							</div> -->
+							<!-- Микрофон -->
+							<div class="product__el all__tub equipment__tub arnavi-microphone">
+								<a href="equip/ritmix.html">
+									<div class="product__image">
+										<img src="@img/products/equip/ritmix.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">МИКРОФОН RITMIX</h3>
+								<p class="product__text">Микрофон</p>
+								<a href="equip/ritmix.html" class="product__link">Подробнее</a>
+								<a href="#request-ritmix" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Тревожная кнопка -->
+							<div class="product__el all__tub equipment__tub arnavi-button">
+								<a href="equip/alarm-button.html">
+									<div class="product__image">
+										<img src="@img/products/equip/alarm-button.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">ТРЕВОЖНАЯ КНОПКА</h3>
+								<p class="product__text">Тревожная кнопка</p>
+								<a href="equip/alarm-button.html" class="product__link">Подробнее</a>
+								<a href="#request-alarm-button" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Антенны ГЛОНАСС -->
+							<div class="product__el all__tub equipment__tub arnavi-anten">
+								<a href="equip/antenna.html">
+									<div class="product__image">
+										<img src="@img/products/equip/antenna.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АНТЕННЫ ГЛОНАСС+GSM</h3>
+								<p class="product__text">Комплект антенн</p>
+								<a href="equip/antenna.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Фишка с проводами 24 -->
+							<div class="product__el all__tub equipment__tub arnavi-wire">
+								<a href="equip/wire-24.html">
+									<div class="product__image">
+										<img src="@img/products/equip/wires-24p.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">РАЗЪЕМЫ 24Р С ПРОВОДАМИ</h3>
+								<p class="product__text">Фишка с проводами</p>
+								<a href="equip/wire-24.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Фишка с проводами 8 -->
+							<div class="product__el all__tub equipment__tub arnavi-wire2">
+								<a href="equip/wire-8.html">
+									<div class="product__image">
+										<img src="@img/products/equip/wires-8p.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">РАЗЪЕМЫ 8Р С ПРОВОДАМИ</h3>
+								<p class="product__text">Фишка с проводами</p>
+								<a href="equip/wire-8.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Аккум 250 -->
+							<div class="product__el all__tub equipment__tub arnavi-akb">
+								<a href="equip/akb250.html">
+									<div class="product__image">
+										<img src="@img/products/equip/akb-250.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АККУМУЛЯТОР 250 МА</h3>
+								<p class="product__text">Резервный аккумулятор</p>
+								<a href="equip/akb250.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Аккум 400 -->
+							<div class="product__el all__tub equipment__tub arnavi-akb2">
+								<a href="equip/akb400.html">
+									<div class="product__image">
+										<img src="@img/products/equip/akb-600.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АККУМУЛЯТОР 600 МА</h3>
+								<p class="product__text">Резервный аккумулятор</p>
+								<a href="equip/akb400.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Аккум 900 -->
+							<div class="product__el all__tub equipment__tub arnavi-akb3">
+								<a href="equip/akb720.html">
+									<div class="product__image">
+										<img src="@img/products/equip/akb-720.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АККУМУЛЯТОР 720 МА</h3>
+								<p class="product__text">Резервный аккумулятор</p>
+								<a href="equip/akb720.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Аккум 1200 -->
+							<div class="product__el all__tub equipment__tub arnavi-akb4">
+								<a href="equip/akb1100.html">
+									<div class="product__image">
+										<img src="@img/products/equip/akb-1100.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АККУМУЛЯТОР 1100 МА</h3>
+								<p class="product__text">Резервный аккумулятор</p>
+								<a href="equip/akb1100.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!--Аккум 1350-->
+							<div class="product__el all__tub equipment__tub arnavi-akb5">
+								<a href="equip/akb1350.html">
+									<div class="product__image">
+										<img src="@img/products/equip/akb-1350.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">АККУМУЛЯТОР 1350 МА</h3>
+								<p class="product__text">Резервный аккумулятор</p>
+								<a href="equip/akb1350.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+							<!-- Кабель монтажный для ДУТ -->
+							<div class="product__el all__tub equipment__tub arnavi-cable">
+								<a href="equip/cable.html">
+									<div class="product__image">
+										<img src="@img/products/equip/cable.png" alt="">
+									</div>
+								</a>
+								<h3 class="product__name">КАБЕЛЬ МОНТАЖНЫЙ</h3>
+								<p class="product__text">Монтажный кабель для ДУТ</p>
+								<a href="equip/cable.html" class="product__link">Подробнее</a>
+								<a href="#request-popup" class="product__button popup-link button-white">Заказать</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Скролл ап кнопка -->
+		<a href="#main" o="slowScroll('#main')">
+			<div class="scroll-up">
+				<div class="scroll-up__line"></div>
+			</div>
+		</a>
+		<!-- добавляем поп-ап фильтра -->
+		@@include('html/filter-pop.html',{})
+		<!-- Добавляем поп-апы -->
+		@@include('html/popup.html',{})
+		<!-- Добавляем футтер -->
+		@@include('html/footer.html',{})
+	</div>
+	<!-- Подключам jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Подключаем второй слайдер -->
+	<script src="js/slick.min.js"></script>
+	<!-- Подключаем JS главный -->
+	<script src="js/script.js"></script>
+	<!--  -->
+	<script src="js/products-breadcump.js"></script>
+	<!-- Добавляем JS для форм -->
+	<script src="js/form.js"></script>
+</body>
+
+</html>

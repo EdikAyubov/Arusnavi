@@ -1,0 +1,236 @@
+<div id="filter-pop" class="popup">
+	<div class="popup__body">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__content filter-pop__content">
+			<a href="#header" class="popup__close close-popup"></a>
+			<div class="filter-pop__categories">
+				<div class="filter-pop__tab">
+					<form class="filter-pop__parameter" action="#">
+						<section class="filter-pop__enter">
+							<p class="filter-pop__title">Количество входов:</p>
+							<div>
+								<input id="all-enter-1" type="radio" checked name="inputCount" value="all" class="radio">
+								<label for="all-enter-1" class="radio__label">Показать все</label>
+							</div>
+							<div>
+								<input id="2-enter-1" type="radio" name="inputCount" value="2" class="radio">
+								<label for="2-enter-1" class="radio__label">2 входа</label>
+							</div>
+							<div>
+								<input id="3-enter-1" type="radio" name="inputCount" value="3" class="radio">
+								<label for="3-enter-1" class="radio__label">3 входа</label>
+							</div>
+							<div>
+								<input id="4-enter-1" type="radio" name="inputCount" value="4" class="radio">
+								<label for="4-enter-1" class="radio__label">4 входа</label>
+							</div>
+							<div>
+								<input id="7-enter-1" type="radio" name="inputCount" value="7" class="radio">
+								<label for="7-enter-1" class="radio__label">7 входов</label>
+							</div>
+							<div>
+								<input id="10-enter-1" type="radio" name="inputCount" value="10" class="radio">
+								<label for="10-enter-1" class="radio__label">10 входов</label>
+							</div>
+						</section>
+						<section class="filter-pop__antenna">
+							<p class="filter-pop__title">Антенная навигация:</p>
+							<div>
+								<input id="all-nav-1" type="radio" checked name="navAntenna" value="all" class="radio">
+								<label for="all-nav-1" class="radio__label">Показать все</label>
+							</div>
+							<div>
+								<input id="external-nav-1" type="radio" name="navAntenna" value="external" class="radio">
+								<label for="external-nav-1" class="radio__label">Внешняя</label>
+							</div>
+							<div>
+								<input id="internal-nav-1" type="radio" name="navAntenna" value="internal" class="radio">
+								<label for="internal-nav-1" class="radio__label">Внутренняя</label>
+							</div>
+						</section>
+						<section class="filter-pop__gsm">
+							<p class="filter-pop__title">GSM антенна:</p>
+							<div>
+								<input id="all-gsm-1" type="radio" checked name="gsmAntenna" value="all" class="radio">
+								<label for="all-gsm-1" class="radio__label">Показать все</label>
+							</div>
+							<div>
+								<input id="external-gsm-1" type="radio" name="gsmAntenna" value="external" class="radio">
+								<label for="external-gsm-1" class="radio__label">Внешняя</label>
+							</div>
+							<div>
+								<input id="internal-gsm-1" type="radio" name="gsmAntenna" value="internal" class="radio">
+								<label for="internal-gsm-1" class="radio__label">Внутренняя</label>
+							</div>
+						</section>
+						<div class="filter-pop__line"></div>
+						<section class="filter-pop__modem">
+							<p class="filter-pop__title">GSM модем:</p>
+							<div>
+								<input id="all-modem-1" type="radio" checked name="gsmModem" value="all" class="radio">
+								<label for="all-modem-1" class="radio__label">Показать все</label>
+							</div>
+							<div>
+								<input id="2g-modem-1" type="radio" name="gsmModem" value="2G" class="radio">
+								<label for="2g-modem-1" class=" radio__label">2G</label>
+							</div>
+							<div>
+								<input id="4g-modem-1" type="radio" name="gsmModem" value="2G4G" class="radio">
+								<label for="4g-modem-1" class="radio__label">2G | 4G(LTE)</label>
+							</div>
+						</section>
+						<section class="filter-pop__sim">
+							<p class="filter-pop__title">SIM карты:</p>
+							<div>
+								<input id="all-sim-1" type="radio" checked name="simCardSlots" value="all" class="radio">
+								<label for="all-sim-1" class=" radio__label">Показать все</label>
+							</div>
+							<div>
+								<input id="one-sim-1" type="radio" name="simCardSlots" value="oneSimCardOrSimChip"
+									class="radio">
+								<label for="one-sim-1" class=" radio__label">1 SIM карта или SIM chip</label>
+							</div>
+							<div>
+								<input id="two-sim-1" type="radio" name="simCardSlots" value="twoSimCardOrSimChips"
+									class="radio">
+								<label for="two-sim-1" class="radio__label">2 SIM картs или SIM chip</label>
+							</div>
+						</section>
+						<div class="filter-pop__line"></div>
+						<section class="filter-pop__interface">
+							<p class="filter-pop__title">Интерфейсы:</p>
+							<div>
+								<input id="bluetooth-1" type="checkbox" name="hasBLE" class="check">
+								<label for="bluetooth-1" class=" check__label">BLE Bluetooth</label>
+							</div>
+							<div>
+								<input id="1-wire-1" type="checkbox" name="hasOneWire" class="check onewire">
+								<label for="1-wire-1" class=" check__label onewire">1-WIRE</label>
+							</div>
+							<div>
+								<input id="CAN-1" type="checkbox" name="hasCan" class="check">
+								<label for="CAN-1" class=" check__label">CAN</label>
+							</div>
+							<div>
+								<input id="RS485-1" type="checkbox" name="hasRS485" class="check">
+								<label for="RS485-1" class=" check__label">RS485</label>
+							</div>
+							<div>
+								<input id="RS232-1" type="checkbox" name="hasRS232" class="check">
+								<label for="RS232-1" class=" check__label">RS232</label>
+							</div>
+						</section>
+						<div class="filter-pop__line"></div>
+						<section class="filter-pop__function">
+							<p class="filter-pop__title">Функциональные особенности:</p>
+							<div>
+								<input id="move-1" type="checkbox" name="hasAccelerometer" class="check">
+								<label for="move-1" class=" check__label">Датчик движения (акселерометр)</label>
+							</div>
+							<div>
+								<input id="magnit-1" type="checkbox" name="hasMagnit" class="check">
+								<label for="magnit-1" class=" check__label">Магнитное крепление</label>
+							</div>
+							<div>
+								<input id="odometr-1" type="checkbox" name="hasOdometr" class="check">
+								<label for="odometr-1" class=" check__label">Встроенный одамометр</label>
+							</div>
+							<div>
+								<input id="glonass-1" type="checkbox" name="hasGlonass" class="check">
+								<label for="glonass-1" class=" check__label">Поддержка ГЛОНАСС</label>
+							</div>
+							<div>
+								<input id="servers-1" type="checkbox" name="hasServers" class="check">
+								<label for="servers-1" class=" check__label">Отправка данных на несколько серверов</label>
+							</div>
+							<div>
+								<input id="connection-1" type="checkbox" name="hasConnection" class="check">
+								<label for="connection-1" class=" check__label">Голосовая связь</label>
+							</div>
+							<section class="filter-pop__hidden">
+								<div>
+									<input id="wifi-1" type="checkbox" name="hasWifi" class="check">
+									<label for="wifi-1" class=" check__label">Поддержка Wi-Fi</label>
+								</div>
+								<div>
+									<input id="alarm-1" type="checkbox" name="hasAlarm" class="check">
+									<label for="alarm-1" class=" check__label">Тревожная кнопка
+									</label>
+								</div>
+								<div>
+									<input id="driver-1" type="checkbox" name="hasDriver" class="check">
+									<label for="driver-1" class=" check__label">Идентификация водителя
+									</label>
+								</div>
+								<!-- <div>
+									<input id="chat-1" type="checkbox" name="hasChat" class="check">
+									<label for="chat-1" class=" check__label">Чат с водителем
+									</label>
+								</div> -->
+								<div>
+									<input id="connect-camera-1" type="checkbox" name="hasConnectCamera" class="check">
+									<label for="connect-camera-1" class=" check__label">Подключение камеры
+									</label>
+								</div>
+								<div>
+									<input id="tahograf-1" type="checkbox" name="hasTahograf" class="check">
+									<label for="tahograf-1" class=" check__label">Загрузка файлов с тахографа
+									</label>
+								</div>
+								<div>
+									<input id="driving-1" type="checkbox" name="hasDriving" class="check">
+									<label for="driving-1" class=" check__label">ECO driving
+									</label>
+								</div>
+								<div>
+									<input id="sensor-analog-1" type="checkbox" name="hasSensorAnalog" class="check">
+									<label for="sensor-analog-1" class=" check__label">Аналоговые датчики
+									</label>
+								</div>
+								<!-- <div>
+									<input id="lbs-1" type="checkbox" name="hasLbs" class="check">
+									<label for="lbs-1" class=" check__label">LBS
+									</label>
+								</div> -->
+								<div>
+									<input id="sensor-digital-1" type="checkbox" name="hasSensorDigital" class="check">
+									<label for="sensor-digital-1" class=" check__label">Цифровые датчики
+									</label>
+								</div>
+								<div>
+									<input id="sms-1" type="checkbox" name="hasSms" class="check">
+									<label for="sms-1" class=" check__label">Управляющие команды по SMS
+									</label>
+								</div>
+								<div>
+									<input id="tcp-1" type="checkbox" name="hasTcp" class="check">
+									<label for="tcp-1" class=" check__label">Связь через TCP
+									</label>
+								</div>
+								<div>
+									<input id="gprs-1" type="checkbox" name="hasGprs" class="check">
+									<label for="gprs-1" class=" check__label">Управляющие команды по GPRS
+									</label>
+								</div>
+								<div>
+									<input id="mobileye-1" type="checkbox" name="hasMobilEye" class="check">
+									<label for="mobileye-1" class=" check__label">Поддержка MobilEye
+									</label>
+								</div>
+								<div>
+									<input id="modbus-1" type="checkbox" name="hasModbus" class="check">
+									<label for="modbus-1" class=" check__label">Поддержка протокола Modbus
+									</label>
+								</div>
+
+							</section>
+							<p class="filter-pop__more">Посмотреть еще...</p>
+						</section>
+					</form>
+				</div>
+				<a href="#header" data-f="reset" class="filter-pop__button popup__close">Применить</a>
+				<a href="" class="filter-pop__reset">Сбросить</a>
+			</div>
+		</div>
+	</div>
+</div>
